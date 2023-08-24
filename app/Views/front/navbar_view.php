@@ -1,6 +1,6 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg" style="background-color: #5E1A57;">
-  <div class="container-fluid">
+  <div class="container-fluid px-4">
     <a class="navbar-brand" href="inicio">
       <img src="./assets/img/logo.svg" alt="IDI" width="40px">
     </a>
