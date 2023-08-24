@@ -1,3 +1,3 @@
 <div class="">
-  <!-- Acá va la vista del login -->
+  <h1>Vista login</h1>
 </div>
