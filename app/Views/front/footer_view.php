@@ -1,6 +1,6 @@
   <footer>
     <div class="card">
-      Acá va el footer
+      ACÁ VA EL FOOTER
     </div>
   </footer>
 

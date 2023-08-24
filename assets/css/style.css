@@ -1,1 +1,15 @@
 /* ARCHIVO DE ESTILOS */
+.boton-morado{
+  background-color: #5E1A57;
+  color: #FFFF;
+  width: 30%;
+  height: 30px;
+  border-radius: 40px;
+}
+
+.boton-amarillo{
+  background-color: #FFD93D;
+  width: 30%;
+  height: 30px;
+  border-radius: 40px;
+}
