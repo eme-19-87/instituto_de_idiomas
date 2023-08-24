@@ -11,6 +11,7 @@
   <div class="d-grid gap-2 d-md-block">
     <button type="button" class="boton-morado">Aceptar</button>
     <button type="button" class="boton-amarillo">Cancelar</button>
-    <p>Aún no se registró. <i>Registrarse aquí</i></p>
+    <p>Aún no se registró<a href="#" class="link-primary">Registrarse aqui</a></p>
+    <!-- Vale fijate si sirve este "enlace"-->
   </div>
 </div>
