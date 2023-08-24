@@ -19,5 +19,8 @@
   color:white;
   padding: 20px;
   
-
+}
+.card-body{
+  background-color: #6BCB77;
+  color: black;
 }
