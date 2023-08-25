@@ -53,4 +53,17 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <div class="row">
+      <div class="col-md-6">
+        <img src="assets/img/cursos-de-idiomas.jpg" alt="curso" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2> Cursos De Objetivos Específicos</h2>
+        <p style="text-align: justify;">Además de los cursos regulares de los distintos idiomas, ofrecemos talleres de objetivos específicos. Los talleres son el ámbito ideal para estudiar la lengua elegida con un objetivo particular, por ejemplo, mejorar la pronunciación, hablar sobre cine o literatura, desarrollar la capacidad para hablar y 
+          escribir en ámbitos laborales y académicos, entre otras propuestas. </p>
+      </div>
+    </div>
+  </div>
 </div>

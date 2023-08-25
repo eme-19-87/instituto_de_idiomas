@@ -46,12 +46,12 @@
 /* VISTA QUIENES SOMOS  */
 
 .historia-instituto{
-  background-color:#5E1A57;
-  color:white;
+  background-color:#FFD93D;
+  color:black;
   padding: 20px;
+  text-align: justify;
+  ;
+
   
 }
-.card-body-quienes-somos{
-  background-color: #6BCB77;
-  color: black;
-}
+ 
