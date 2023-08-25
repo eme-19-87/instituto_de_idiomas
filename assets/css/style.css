@@ -1,4 +1,6 @@
 /* ARCHIVO DE ESTILOS */
+
+
 .boton-morado{
   background-color: #5E1A57 !important;
   color: #FFFF !important;
@@ -46,4 +48,41 @@
 .card-body{
   background-color: #6BCB77;
   color: black;
+}
+
+
+/*----------------------------------------Estilos Kike-------------------------------------------------*/
+
+/*Esto lo uso para resaltar las etiquetas de los formularios de login y registro para que tengan 
+ese color amarillo sólo en las etiquetas.
+Cualquier cosa, se le cambia el estilo*/
+
+.estilo-formulario{
+  border:0;
+  border-style: none;
+  box-sizing: border-box;
+
+}
+.estilo-formulario .resaltar{
+  background-color:#FFD93D;
+  border-radius:5px;
+}
+
+.boton-aceptar{
+  background-color: #6BCB77;
+  width: 30%;
+  height: 30px;
+  border-radius: 40px;
+}
+
+.caja-login{
+  width: 100%;
+  height:50%;
+}
+
+.container .boton-cancelar{
+  background-color: #FF6B6B;
+  width: 30%;
+  height: 30px;
+  border-radius: 40px;
 }
