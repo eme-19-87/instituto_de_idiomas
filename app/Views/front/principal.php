@@ -28,4 +28,29 @@
     </div>
   </div>
 </header>
-<div></div>
+
+<!--   Cards de idiomas   -->
+<div class="container text-center py-5">
+  <div class="row row-cols-2 row-cols-md-4 justify-content-between">
+    <div class="col">
+      <div class="cards-idiomas" style="background-color: #FFD93D;">
+        <h4>INGLÉS</h4>
+      </div>
+    </div>
+    <div class="col">
+      <div class="cards-idiomas" style="background-color: #6BCB77">
+        <h4>ITALIANO</h4>
+      </div>
+    </div>
+    <div class="col">
+      <div class="cards-idiomas" style="background-color: #FF6B6B">
+        <h4>ALEMÁN</h4>
+      </div>
+    </div>
+    <div class="col">
+      <div class="cards-idiomas" style="background-color: #4D96FF">
+        <h4>FRANCÉS</h4>
+      </div>
+    </div>
+  </div>
+</div>

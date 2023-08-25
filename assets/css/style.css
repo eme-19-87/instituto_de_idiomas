@@ -35,6 +35,14 @@
   color: #5E1A57;
 }
 
+.cards-idiomas{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+}
+
+
 /* VISTA QUIENES SOMOS  */
 
 .historia-instituto{
@@ -43,7 +51,7 @@
   padding: 20px;
   
 }
-.card-body{
+.card-body-quienes-somos{
   background-color: #6BCB77;
   color: black;
 }
