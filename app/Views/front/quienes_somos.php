@@ -1,30 +1,37 @@
-  <header>
-    <h1> Equipo docente</h1>
-  </header>
-  <div class="conocenos">
-  
-  <div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <div class="card-body">
-     
-        <h5 class="card-title"> Valeria Palacios</h5>
-        <p class="card-text">Fundadora de nuestro instituto esta gran profesional, se encuentra a cargo de la enseñanza de los idiomas de Ingles y Alemán.
-        
-        </p>
+<div class="container-fluid py-4 ps-4" style="background: #F9B400">
+  <h1 style="text-align: left;">Equipo docente</h1>
+  <div class="container-fluid">
+    <div class="row row-cols-3">
+      <div class="col-lg col-sm-12 py-4">
+        <div class="card" style="background: #5E1A57; color: white; text-align: justify;">
+          <img src="assets/img/vale.jpg" class="card-img-top" alt="profe1">
+          <div class="card-body">
+            <h5 class="card-title">Valeria Palacios</h5>
+            <p class="card-text"> Docente en ejercicio de nuestro Instituto, 
+            se encuentra a cargo de impartir las clases de Alemán e ingles en los diferentes niveles que integran nuestro centro educativo. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-sm-12 py-4">
+        <div class="card" style="background: #5E1A57; color: white; text-align: justify;">
+          <img src="assets/img/kike.jpg" class="card-img-top" alt="profe2">
+          <div class="card-body">
+            <h5 class="card-title">Enrique Espinoza</h5>
+            <p class="card-text"> Fundador y docente de nuestra querida Institución, este gran profesional se desempeña como Profesor de Italiano desde hace años dentro de nuestro instituto.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg col-sm-12 py-4">
+        <div class="card" style="background: #5E1A57; color: white; text-align: justify;">
+          <img src="assets/img/jess.jpg" class="card-img-top" alt="profe3">
+          <div class="card-body">
+            <h5 class="card-title">Jesica Queupumil</h5>
+            <p class="card-text"> Profesora de frances, esta profesional se integró hace dos años a nuestra casa de estudios.
+              Actualmente brinda clases dentro de la institución en diferentes niveles.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Enrique Espinoza</h5>
-        <p class="card-text">Fundador y docente de nuestro instituto desde los comienzos, es el encargado de la enseñanza de los idiomas de Italiano y Frances.
-
-        </p> 
-      </div>
-    </div>
-  </div>
-  
 </div>
-  </div>
