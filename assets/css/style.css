@@ -40,6 +40,8 @@
   justify-content: space-around;
   align-items: center;
   height: 120px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 
@@ -50,8 +52,5 @@
   color:black;
   padding: 20px;
   text-align: justify;
-  ;
-
-  
 }
  

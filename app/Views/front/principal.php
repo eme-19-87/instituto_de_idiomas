@@ -33,11 +33,9 @@
 <div class="container text-center py-5">
   <div class="row row-cols-2 row-cols-md-4 justify-content-between">
     <div class="col">
-      <button class="cards-idiomas">
-        <div style="background-color: #FFD93D;">
+        <div class="cards-idiomas" style="background-color: #FFD93D;">
           <h4>INGLÉS</h4>
         </div>
-      </button>
     </div>
     <div class="col">
       <div class="cards-idiomas" style="background-color: #6BCB77">
@@ -55,17 +53,45 @@
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  <div class="row">
-      <div class="col-md-6">
-        <img src="assets/img/cursos-de-idiomas.jpg" alt="curso" class="img-fluid">
+</div>
+
+
+<!-- CAROUSEL -->
+<div class="container-fluid py-4 ps-4 text-star" style="background-color: #5E1A57">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/cursos-de-idiomas.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/cursos-de-idiomas.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/cursos-de-idiomas.jpg" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="col-md-6">
-        <h2> Cursos De Objetivos Específicos</h2>
-        <p style="text-align: justify;">Además de los cursos regulares de los distintos idiomas, ofrecemos talleres de objetivos específicos. Los talleres son el ámbito ideal para estudiar la lengua elegida con un objetivo particular, por ejemplo, mejorar la pronunciación, hablar sobre cine o literatura, desarrollar la capacidad para hablar y 
-          escribir en ámbitos laborales y académicos, entre otras propuestas. </p>
-      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 style="color: white"> Cursos de objetivos específicos</h2>
+      <p style="text-align: justify; color: white">Además de los cursos regulares de los distintos idiomas, ofrecemos talleres de objetivos específicos. Los talleres son el ámbito ideal para estudiar la lengua elegida con un objetivo particular, por ejemplo, mejorar la pronunciación, hablar sobre cine o literatura, desarrollar la capacidad para hablar y 
+        escribir en ámbitos laborales y académicos, entre otras propuestas. </p>
     </div>
   </div>
 </div>
+
