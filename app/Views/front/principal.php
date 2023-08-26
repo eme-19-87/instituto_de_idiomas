@@ -1,5 +1,5 @@
 <header>
-  <div class="container-fluid pt-4 ps-4 text-star" style=" background-color: #F9B400">
+  <div class="container-fluid pt-4 ps-4 text-star" style="background-color: #F9B400">
     <div class="row align-items-center">
       <div class="col-sm-7 pb-5">
         <span class="h1 align-middle">Cursos grupales de 2, 3 y 4 meses, presenciales y virtuales.</span>

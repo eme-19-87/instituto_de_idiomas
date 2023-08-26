@@ -1,4 +1,4 @@
-<div class="container-fluid py-4 ps-4" style="background: #FFD93D">
+<div class="container-fluid py-4 ps-4" style="background: #F9B400">
   <h1 style="text-align: left;">Equipo docente</h1>
   <div class="container-fluid">
     <div class="row row-cols-3">
