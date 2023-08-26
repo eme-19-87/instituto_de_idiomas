@@ -11,7 +11,7 @@
 
 				<div class="d-flex pt-4 justify-content-between">
 						<button type="button" class="boton-aceptar">
-							Registrarse
+							Ingresar
 						</button>
 
 						<button type="button" class="boton-cancelar fw-semibold" >
