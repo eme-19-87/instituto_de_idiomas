@@ -33,9 +33,11 @@
 <div class="container text-center py-5">
   <div class="row row-cols-2 row-cols-md-4 justify-content-between">
     <div class="col">
-      <div class="cards-idiomas" style="background-color: #FFD93D;">
-        <h4>INGLÉS</h4>
-      </div>
+      <button class="cards-idiomas">
+        <div style="background-color: #FFD93D;">
+          <h4>INGLÉS</h4>
+        </div>
+      </button>
     </div>
     <div class="col">
       <div class="cards-idiomas" style="background-color: #6BCB77">
