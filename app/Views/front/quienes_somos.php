@@ -1,8 +1,8 @@
 <div class="container-fluid py-4 ps-4" style="background: #FFD93D">
   <h1 style="text-align: left;">Equipo docente</h1>
-  <div class="container-fluid py-4">
+  <div class="container-fluid">
     <div class="row row-cols-3">
-      <div class="col">
+      <div class="col-lg col-sm-12 py-4">
         <div class="card" style="background: #5E1A57; color: white; text-align: justify;">
           <img src="assets/img/vale.jpg" class="card-img-top" alt="profe1">
           <div class="card-body">
@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-lg col-sm-12 py-4">
         <div class="card" style="background: #5E1A57; color: white; text-align: justify;">
           <img src="assets/img/kike.jpg" class="card-img-top" alt="profe2">
           <div class="card-body">
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-lg col-sm-12 py-4">
         <div class="card" style="background: #5E1A57; color: white; text-align: justify;">
           <img src="assets/img/jess.jpg" class="card-img-top" alt="profe3">
           <div class="card-body">

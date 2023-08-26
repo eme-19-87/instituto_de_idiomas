@@ -1,7 +1,7 @@
 <header>
   <div class="container-fluid pt-4 ps-4 text-star" style=" background-color: #F9B400">
     <div class="row align-items-center">
-      <div class="col-7">
+      <div class="col-sm-7 pb-5">
         <span class="h1 align-middle">Cursos grupales de 2, 3 y 4 meses, presenciales y virtuales.</span>
         <div class="d-flex pt-3">
           <button type="button" class="boton-info me-4" disabled>+ INFO</button>
@@ -22,42 +22,41 @@
           </a>
         </div>
       </div>
-      <div class="col-5">
+      <div class="col-sm-5 d-none d-sm-block">
         <img src="./assets/img/alum-hero.svg" alt="IDI-alumnos" class="img-fluid pt-8">
       </div>
     </div>
   </div>
 </header>
-
+<br><br>
 <!--   Cards de idiomas   -->
-<div class="container text-center py-5">
+<div class="container text-center">
   <div class="row row-cols-2 row-cols-md-4 justify-content-between">
-    <div class="col">
+    <div class="col py-3">
         <div class="cards-idiomas" style="background-color: #FFD93D;">
           <h4>INGLÉS</h4>
         </div>
     </div>
-    <div class="col">
+    <div class="col py-3">
       <div class="cards-idiomas" style="background-color: #6BCB77">
         <h4>ITALIANO</h4>
       </div>
     </div>
-    <div class="col">
+    <div class="col py-3">
       <div class="cards-idiomas" style="background-color: #FF6B6B">
         <h4>ALEMÁN</h4>
       </div>
     </div>
-    <div class="col">
+    <div class="col py-3">
       <div class="cards-idiomas" style="background-color: #4D96FF">
         <h4>FRANCÉS</h4>
       </div>
     </div>
   </div>
 </div>
-
-
+<br><br>
 <!-- CAROUSEL -->
-<div class="container-fluid py-4 ps-4 text-star" style="background-color: #5E1A57">
+<div class="container-fluid py-4 ps-4 text-star d-none d-sm-block" style="background-color: #5E1A57">
   <div class="row align-items-center">
     <div class="col-md-6">
       <div id="carouselExampleIndicators" class="carousel slide">
