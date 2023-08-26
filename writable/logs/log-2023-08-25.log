@@ -1,0 +1,11 @@
+CRITICAL - 2023-08-25 02:17:55 --> Undefined variable: titulo
+in APPPATH\Views\front\head_view.php on line 6.
+ 1 APPPATH\Views\front\head_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: titulo', 'D:\\XAMPP\\htdocs\\instituto-de-idiomas\\app\\Views\\front\\head_view.php', 6, [])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP\\htdocs\\instituto-de-idiomas\\app\\Views\\front\\head_view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/head_view', [], true)
+ 5 APPPATH\Controllers\Home.php(26): view('front/head_view')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->acerca_de()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

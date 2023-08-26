@@ -1,6 +1,6 @@
 <header class="historia-instituto">
   <div>
-    <h1> Nuestra historia </h1>
+    <h2> Nuestra historia </h2>
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-md-5">
