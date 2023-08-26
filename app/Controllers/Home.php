@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data['titulo']='Instituto Idiomas';
+        $data['titulo']='Instituto de Idiomas';
         echo view('front/head_view',$data);
         echo view('front/navbar_view');
         echo view('front/principal');
@@ -14,7 +14,7 @@ class Home extends BaseController
     }
     public function quienes_somos ()
     {
-        $data['titulo']='¡Quienes somos?';
+        $data['titulo']='¿Quiénes somos?';
         echo view('front/head_view',$data);
         echo view('front/navbar_view');
         echo view('front/quienes_somos');
@@ -38,7 +38,7 @@ class Home extends BaseController
     }
     public function login ()
     {
-        $data['titulo']='Iniciar Sesion';
+        $data['titulo']='Iniciar Sesión';
         echo view('front/head_view',$data);
         echo view('front/navbar_view');
         echo view('front/login');
