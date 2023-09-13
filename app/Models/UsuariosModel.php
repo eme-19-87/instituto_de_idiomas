@@ -25,7 +25,7 @@ class UsuariosModel extends Model
     protected $useSoftDeletes = false;
 
     //Aquí colocamos los campos de nuestra tabla. No se agrega el campo id
-    protected $allowedFields = ['nombre','apellido','telefono','correo','password','activo','id_perfil'];
+    protected $allowedFields = ['nombre','apellido','usuario','telefono','correo','password','activo','id_perfil'];
 
     // Dates
     protected $useTimestamps = true;
@@ -66,38 +66,83 @@ class UsuariosModel extends Model
     campo activo con valor igual a 1.
     La porción where('activo',$activo)->findAll(); recupera todos los campos del registro.*/
     public function getUsuarios(){
-       return $this->findAll();
+        try {
+            return $this->findAll();
+        } catch (Exception $e) {
+            
+        }
+       
     }
 
     public function insertarUsuario($datos){
-        $this->save($datos);
+        try {
+            $this->save($datos);
+
+        } catch (Exception $e) {
+            
+        }
+        
         
     }
 
     public function getUsuarioPorId($id){
-        return $this->where('id_usuario',$id)->first();
+        try {
+            return $this->where('id_usuario',$id)->first();
+
+        } catch (Exception $e) {
+            
+        }
+        
     }
 
     public function getPorEstado($estado){
-        return $this->where('activo',$estado)->findAll();
+        try {
+            return $this->where('activo',$estado)->findAll();
+
+        } catch (Exception $e) {
+            
+        }
+        
     }
 
 
     public function updateUsuario($id,$datos){
-        $this->update($id,$datos);
+        try {
+            $this->update($id,$datos);
+
+        } catch (Exception $e) {
+            
+        }
+        
     }
 
     public function darBaja($id){
-        $this->update($id,['activo'=>0]);
+        try {
+            $this->update($id,['activo'=>0]);
+        } catch (Exception $e) {
+            
+        }
+        
     }
 
     public function darAlta($id){
-        $this->update($id,['activo'=>1]);
+        try {
+             $this->update($id,['activo'=>1]);
+
+        } catch (Exception $e) {
+            
+        }
+       
     }
 
     public function getUsuarioPorMail($mail){
-        $busqueda=['correo'=>$mail,'activo'=>1];
-       return $this->where($busqueda)->first();
+        try {
+             $busqueda=['correo'=>$mail,'activo'=>1,'id_perfil'=>2];
+             return $this->where($busqueda)->first();
+        } catch (Exception $e) {
+            
+        }
+       
     }
 
     

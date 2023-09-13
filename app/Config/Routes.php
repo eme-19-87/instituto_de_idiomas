@@ -36,6 +36,7 @@ $routes->get('/login', 'CtrlUsuarios::login');
 $routes->post('registrar_usuario', 'CtrlUsuarios::insertar_usuario');
 $routes->post('loguear_usuario', 'CtrlUsuarios::controlar_logueo');
 $routes->get('cerrar_sesion', 'CtrlUsuarios::logout');
+$routes->get('bienvenida_registro', 'CtrlUsuarios::mostrar_bienvenida');
 
 /*
  * --------------------------------------------------------------------

@@ -52,7 +52,7 @@ class CtrlUsuarios extends BaseController
     UnidadesModel y nos servirá para realizar las query a la tabla unidades.
     Nótese cómo se settea la variable mediante el setter*/
     public function __construct(){
-        helper('form');
+        helper('form','url');
         $this->setModelUsuarios(new UsuariosModel());
         /*
         La regla is_unique permite determinar que un campo específico sea único. Para ello le decimos
@@ -62,16 +62,27 @@ class CtrlUsuarios extends BaseController
         */
         $this->setReglaNewUpdate(
             [
-            "nombre"=>["rules"=>"required",
-            "errors"=>["required"=>"El campo 'nombre' es obligatorio"] 
+            "nombre"=>["rules"=>"required|min_length[3]|max_length[50]",
+            "errors"=>["required"=>"El campo 'nombre' es obligatorio",
+                      "min_length"=>"El campo nombre debe contener como mínimo 3 caracteres",
+                      "max_length"=>"El campo nombre no debe superar los 50 caracteres"] 
             ],
 
-            "apellido"=>["rules"=>"required",
-            "errors"=>["required"=>"El campo 'apellido' es obligatorio"] 
+            "apellido"=>["rules"=>"required|min_length[3]|max_length[80]",
+            "errors"=>["required"=>"El campo 'apellido' es obligatorio",
+                      "min_length"=>"El campo apellido debe contener como mínimo 3 caracteres",
+                      "max_length"=>"El campo apellido no debe superar los 80 caracteres"] 
             ],
 
-            "pass"=>["rules"=>"required",
-            "errors"=>["required"=>"El campo 'Contraseña' es obligatorio"]
+            "usuario"=>["rules"=>"required|min_length[4]|max_length[40]",
+            "errors"=>["required"=>"El nombre del usuario es requerido",
+                       "min_length"=>"El nombre de usuario debe contener como mínimo 4 caracteres",
+                      "max_length"=>"El nombre de usuario no debe superar los 40 caracteres"] 
+            ],
+
+            "pass"=>["rules"=>"required|min_length[8]|max_length[100]",
+            "errors"=>["required"=>"El campo 'Contraseña' es obligatorio",
+                       "min_length"=>"La contraseña debe contener al menos 8 caracteres"]
             ],
 
             "pass_conf"=>["rules"=>"required|matches[pass]",
@@ -107,32 +118,72 @@ class CtrlUsuarios extends BaseController
 
  public function registrarse ($errores=[])
     {
-        $data['titulo']='Registrarse';
-        echo view('front/head_view',$data);
-        echo view('front/navbar_view');
-        //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
-        //ventana de registrarse.
-        if (session()->id_usuario==null){
-            echo view('front/registrarse',$errores);
-        }else{
-            echo view('front/index',$errores);
+        try {
+                
+                //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
+                //ventana de registrarse.
+                if (session()->id_usuario==null){
+                    $data['titulo']='Registrarse';
+                    echo view('front/head_view',$data);
+                    echo view('front/navbar_view');
+                    echo view('back/usuarios/registrarse',$errores);
+                    echo view('front/footer_view');
+                }else{
+                    return redirect()->to(base_url());
+                }
+                
+            
+        } catch (Exception $e) {
+
+            
         }
-        echo view('front/footer_view');
+        
     }
 
     public function login ($errores=[])
     {
-        $data['titulo']='Iniciar Sesión';
-        echo view('front/head_view',$data);
-        echo view('front/navbar_view');
-         //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
-        //ventana de login
-        if (session()->id_usuario==null){
-            echo view('front/login',$errores);
-        }else{
-            echo view('front/index');
+        try {
+                 //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
+                //ventana de login
+                if (session()->id_usuario==null){
+                     $data['titulo']='Iniciar Sesión';
+                    echo view('front/head_view',$data);
+                    echo view('front/navbar_view');
+                    echo view('back/usuarios/login',$errores);
+                    echo view('front/footer_view');
+                }else{
+                    return redirect()->to(base_url());
+                }
+                
+            
+        } catch (Exception $e) {
+            
         }
-        echo view('front/footer_view');
+        
+    }
+
+     public function mostrar_bienvenida ()
+    {
+        try {
+                
+                 //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
+                //ventana de login
+                if (session()->id_usuario==null){
+                    $data['titulo']='Bienvenido';
+                    echo view('front/head_view',$data);
+                    echo view('front/navbar_view');
+                    echo view('front/bienvenida_registro');
+                    echo view('front/footer_view');
+
+                }else{
+                    return redirect()->to(base_url());
+                }
+                
+            
+        } catch (Exception $e) {
+            
+        }
+        
     }
     
 
@@ -149,35 +200,43 @@ class CtrlUsuarios extends BaseController
         /*
         La línea  if ($this->request->getMethod()=="POST") valida que no se envíen datos con POST
         */
-       $metodo_post=$this->request->getMethod()=="post";
+        try {
+                 $metodo_post=$this->request->getMethod()=="post";
 
-       //Esta linea valida que se cumplan las reglas implementadas en el constructor de la clase
-       $reglas_validas=$this->validate($this->getReglaNewUpdate());
-        
-        //si ambas reglas se cumplen, allí recién creamos al usuario
-        if ( $metodo_post && $reglas_validas ){
-            //encriptamos la contraseña para guardarla en la base de datos
-            $encript_pass=password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT);
-
-            //creamos el arreglo con los datos que vamos a guardar en la base de datos
-            //la sintaxis es 'nombre_campo_en_la_tabla'=>valor
-            $new_usu=['nombre'=>$this->request->getPost('nombre'),
-            'apellido'=>$this->request->getPost('apellido'),
-            'correo'=>$this->request->getPost('mail'),
-            'telefono'=>$this->request->getPost('telefono'),
-             'password'=>$encript_pass
-              
-            ];
+           //Esta linea valida que se cumplan las reglas implementadas en el constructor de la clase
+                $reglas_validas=$this->validate($this->getReglaNewUpdate());
             
-            //llamamos al modelo. Nosotros le pasamos los datos, es el modelo el que inserta
-            $this->getModelUsuarios()->insertarUsuario($new_usu);
-            return redirect()->to(base_url());
-        }else{
+                //si ambas reglas se cumplen, allí recién creamos al usuario
+                if ( $metodo_post && $reglas_validas ){
+                    //encriptamos la contraseña para guardarla en la base de datos
+                    $encript_pass=password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT);
 
-            $data['validation']=$this->validator;
-            $this->registrarse($data);
-          
-        };
+                    //creamos el arreglo con los datos que vamos a guardar en la base de datos
+                    //la sintaxis es 'nombre_campo_en_la_tabla'=>valor
+                    $new_usu=['nombre'=>$this->request->getPost('nombre'),
+                    'apellido'=>$this->request->getPost('apellido'),
+                    "usuario"=>$this->request->getPost('usuario'),
+                    'correo'=>$this->request->getPost('mail'),
+                    'telefono'=>$this->request->getPost('telefono'),
+                     'password'=>$encript_pass,
+                     'id_perfil'=>2
+                      
+                    ];
+                    
+                    //llamamos al modelo. Nosotros le pasamos los datos, es el modelo el que inserta
+                    $this->getModelUsuarios()->insertarUsuario($new_usu);
+                    return redirect()->to(base_url('bienvenida_registro'));
+                }else{
+
+                    $data['validation']=$this->validator;
+                    $this->registrarse($data);
+                  
+                };
+            
+        } catch (Exception $e) {
+            
+        }
+     
          
         
 
@@ -187,20 +246,26 @@ class CtrlUsuarios extends BaseController
   /*Controla primeramente que los campos no se dejen vacíos y
   que exista el usuario y la contraseña*/
     public function controlar_logueo(){
-       $metodo_post=$this->request->getMethod()=="post";
-       $reglas_validas=$this->validate($this->getReglasLogin());
-       $error=null;
-       if($metodo_post && $reglas_validas){
-            //recupero el usuario desde la base de datos
-            $datos_usuario=$this->getModelUsuarios()->getUsuarioPorMail($this->request->getPost("mail_login"));
-            //Reviso que el usuario exista e inicia la sesión
-            $error=$this->iniciar_sesion($datos_usuario,$this->request->getPost("pass_login"));
-            //En caso de que haya error o no, este método redirecciona a la vista pertinente
-            return $this->redireccionarInicioSesion($error);
-       }else{
-        $data['validation']=$this->validator;
-        $this->registrarse($data);
-       }
+        try {
+              $metodo_post=$this->request->getMethod()=="post";
+              $reglas_validas=$this->validate($this->getReglasLogin());
+              $error=null;
+               if($metodo_post && $reglas_validas){
+                    //recupero el usuario desde la base de datos
+                    $datos_usuario=$this->getModelUsuarios()->getUsuarioPorMail($this->request->getPost("mail_login"));
+                    //Reviso que el usuario exista e inicia la sesión
+                    $error=$this->iniciar_sesion($datos_usuario,$this->request->getPost("pass_login"));
+                    //En caso de que haya error o no, este método redirecciona a la vista pertinente
+                    return $this->redireccionarInicioSesion($error);
+               } else{
+                $data['validation']=$this->validator;
+                $this->login($data);
+               };
+            
+        } catch (Exception $e) {
+            
+        };
+     
 
     }
 
@@ -209,37 +274,49 @@ class CtrlUsuarios extends BaseController
     sesión y un arreglo con el string del error en caso contrario*/
 
     private function iniciar_sesion($datos_usuario,$password){
-        $datos=null;
-        //Si el usuario existe, $datos_usuario no será nulo
-        $existe_usuario=$this->comprobarUsuarioContra($datos_usuario,$password);
+        try {
+                 $datos=null;
+                //Si el usuario existe, $datos_usuario no será nulo
+                $existe_usuario=$this->comprobarUsuarioContra($datos_usuario,$password);
 
-        //Compruebo que las contraseñas ingresadas sean las correctas y si lo es, inicio la sesión
-        //En caso contrario, retorno los los errores que se mostrarán en la vista.
-        //Si no hay error, se retorna un arreglo cuyo campo 'error' está vacío
-        if($existe_usuario){
-            $datos_sesion=[
-                'id_usuario'=>$datos_usuario['id_usuario'],
-                'nombre_usuario'=>$datos_usuario['apellido']." ".$datos_usuario['nombre'],
-                "correo"=>$datos_usuario['correo']
+                //Compruebo que las contraseñas ingresadas sean las correctas y si lo es, inicio la sesión
+                //En caso contrario, retorno los los errores que se mostrarán en la vista.
+                //Si no hay error, se retorna un arreglo cuyo campo 'error' está vacío
+                if($existe_usuario){
+                    $datos_sesion=[
+                        'id_usuario'=>$datos_usuario['id_usuario'],
+                        'nombre_usuario'=>$datos_usuario['apellido']." ".$datos_usuario['nombre'],
+                        "correo"=>$datos_usuario['correo'],
+                        "usuario"=>$datos_usuario['usuario']
 
-            ];
-            $session=session();
-            $session->set($datos_sesion);
-            $datos["error"]="";
-        }else{
-            $datos["error"]="Error al inicial sesión. Controle su nombre de usuario y su contraseña";
+                    ];
+                    $session=session();
+                    $session->set($datos_sesion);
+                    $datos["error"]="";
+                }else{
+                    $datos["error"]="Error al inicial sesión. Controle su nombre de usuario y su contraseña";
+                };
+                return $datos;
+            
+        } catch (Exception $e) {
+            
         };
-        return $datos;
+       
     }
 
 
     /*Comprueba que exista el usuario y que la contraseña corresponda con el usuario asignado*/
     private function comprobarUsuarioContra($datos_usuario,$password){
-        $valido=false;
-        if($datos_usuario!=null){
-            $valido=password_verify($password,$datos_usuario['password']);
-        };
-        return $valido;
+        try {
+                $valido=false;
+                if($datos_usuario!=null){
+                    $valido=password_verify($password,$datos_usuario['password']);
+                };
+                return $valido;
+        } catch (Exception $e) {
+            
+        }
+       
 
     }
 
@@ -248,20 +325,30 @@ class CtrlUsuarios extends BaseController
     */
 
     public function redireccionarInicioSesion($datos_error){
-       if(strlen($datos_error["error"])!=0){
-            $this->registrarse($datos_error);
-          
-        }
-        else{
-            return redirect()->to(base_url());
+        try {
+            if(strlen($datos_error["error"])!=0){
+                $this->login($datos_error);
+              
+            }
+            else{
+                return redirect()->to(base_url());
+            };
+             
+        } catch (Exception $e) {
+            
         };
-         
+      
     
 
     }   
 
     public function logout(){
-        session()->destroy();
-        return redirect()->to(base_url());
+        try {
+             session()->destroy();
+             return redirect()->to(base_url());
+        } catch (Exception $e) {
+            
+        };
+       
     }
 }
