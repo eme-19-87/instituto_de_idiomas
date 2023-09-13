@@ -1,0 +1,549 @@
+CRITICAL - 2023-09-13 15:14:15 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 44.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:15:40 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 44.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:16:19 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 44.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:16:53 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 44.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:21:03 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 60.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:22:12 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 55.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:22:27 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 55.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(11): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:47:24 --> Invalid file: "front/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/header_view.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/header_view', [], true)
+ 3 APPPATH\Controllers\CtrlUsuarios.php(203): view('front/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:49:39 --> Invalid file: "front/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/header_view.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/header_view', [], true)
+ 3 APPPATH\Controllers\CtrlUsuarios.php(203): view('front/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:49:53 --> Invalid file: "front/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/header_view.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/header_view', [], true)
+ 3 APPPATH\Controllers\CtrlUsuarios.php(203): view('front/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:50:57 --> Invalid file: "front/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/header_view.php')
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/header_view', [], true)
+ 3 APPPATH\Controllers\CtrlUsuarios.php(203): view('front/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:58:30 --> "valid_mail" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 286.
+ 1 SYSTEMPATH\Validation\Validation.php(286): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('valid_mail')
+ 2 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('mail_login', 'mail_login', 'postgres@gmail.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\CtrlUsuarios.php(194): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:59:07 --> Undefined variable: usuario
+in APPPATH\Models\UsuariosModel.php on line 97.
+ 1 APPPATH\Models\UsuariosModel.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: usuario', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php', 97, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(198): App\Models\UsuariosModel->getUsuarioPorMail('postgres@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-13 15:59:46 --> mysqli_sql_exception: Unknown column 'mail' in 'where clause' in D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\instituto_de_idiomas\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\instituto_de_idiomas\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\instituto_de_idiomas\app\Models\UsuariosModel.php(97): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\instituto_de_idiomas\app\Controllers\CtrlUsuarios.php(198): App\Models\UsuariosModel->getUsuarioPorMail('postgres@gmail....')
+#8 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+#9 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+#10 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\instituto_de_idiomas\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-13 15:59:46 --> Unknown column 'mail' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `usuarios`
+WHERE `mail` = \'postgres@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+WHERE `mail` = \'postgres@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+WHERE `mail` = \'postgres@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `mail` = :mail:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UsuariosModel.php(97): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\CtrlUsuarios.php(198): App\Models\UsuariosModel->getUsuarioPorMail('postgres@gmail.com')
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 15:59:59 --> Undefined variable: datos
+in APPPATH\Controllers\CtrlUsuarios.php on line 258.
+ 1 APPPATH\Controllers\CtrlUsuarios.php(258): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: datos', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php', 258, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(202): App\Controllers\CtrlUsuarios->redireccionarInicioSesion([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:13:09 --> syntax error, unexpected '}'
+in APPPATH\Controllers\CtrlUsuarios.php on line 269.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:13:27 --> syntax error, unexpected '}'
+in APPPATH\Controllers\CtrlUsuarios.php on line 269.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:13:52 --> Undefined variable: dats_error
+in APPPATH\Controllers\CtrlUsuarios.php on line 257.
+ 1 APPPATH\Controllers\CtrlUsuarios.php(257): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: dats_error', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php', 257, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(202): App\Controllers\CtrlUsuarios->redireccionarInicioSesion([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:15:48 --> Call to undefined function App\Controllers\length()
+in APPPATH\Controllers\CtrlUsuarios.php on line 257.
+ 1 APPPATH\Controllers\CtrlUsuarios.php(202): App\Controllers\CtrlUsuarios->redireccionarInicioSesion([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:16:07 --> Call to undefined function App\Controllers\length()
+in APPPATH\Controllers\CtrlUsuarios.php on line 257.
+ 1 APPPATH\Controllers\CtrlUsuarios.php(202): App\Controllers\CtrlUsuarios->redireccionarInicioSesion([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:17:32 --> syntax error, unexpected '>=' (T_IS_GREATER_OR_EQUAL)
+in APPPATH\Controllers\CtrlUsuarios.php on line 257.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:18:19 --> syntax error, unexpected '}'
+in APPPATH\Controllers\CtrlUsuarios.php on line 265.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:29:32 --> syntax error, unexpected end of file
+in APPPATH\Views\front\registrarse.php on line 90.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/registrarse', [], true)
+ 3 APPPATH\Controllers\CtrlUsuarios.php(181): view('front/registrarse', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:33:58 --> Undefined variable: validation
+in APPPATH\Views\front\registrarse.php on line 13.
+ 1 APPPATH\Views\front\registrarse.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/registrarse', [], true)
+ 5 APPPATH\Controllers\CtrlUsuarios.php(112): view('front/registrarse')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:34:49 --> Undefined variable: validation
+in APPPATH\Views\front\registrarse.php on line 19.
+ 1 APPPATH\Views\front\registrarse.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/registrarse', [], true)
+ 5 APPPATH\Controllers\CtrlUsuarios.php(112): view('front/registrarse')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:34:58 --> Undefined variable: validation
+in APPPATH\Views\front\registrarse.php on line 19.
+ 1 APPPATH\Views\front\registrarse.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/registrarse', [], true)
+ 5 APPPATH\Controllers\CtrlUsuarios.php(112): view('front/registrarse')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:35:26 --> Undefined variable: validation
+in APPPATH\Views\front\registrarse.php on line 32.
+ 1 APPPATH\Views\front\registrarse.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Views\\front\\registrarse.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/registrarse', [], true)
+ 5 APPPATH\Controllers\CtrlUsuarios.php(112): view('front/registrarse')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->registrarse()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 16:52:33 --> syntax error, unexpected end of file
+in APPPATH\Views\front\navbar_view.php on line 44.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('front/navbar_view', [], true)
+ 3 APPPATH\Controllers\Home.php(27): view('front/navbar_view')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->acerca_de()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 16:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-13 17:11:21 --> mysqli_sql_exception: Unknown column 'password' in 'field list' in D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\XAMPP\htdocs\instituto_de_idiomas\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\XAMPP\htdocs\instituto_de_idiomas\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\XAMPP\htdocs\instituto_de_idiomas\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\XAMPP\htdocs\instituto_de_idiomas\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\XAMPP\htdocs\instituto_de_idiomas\app\Models\UsuariosModel.php(72): CodeIgniter\BaseModel->save(Array)
+#9 D:\XAMPP\htdocs\instituto_de_idiomas\app\Controllers\CtrlUsuarios.php(175): App\Models\UsuariosModel->insertarUsuario(Array)
+#10 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+#11 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+#12 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\XAMPP\htdocs\instituto_de_idiomas\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-09-13 17:11:21 --> Unknown column 'password' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `usuarios` (`nombre`, `password`, `telefono`, `apellido`, `fecha_alta`, `fecha_edit`) VALUES (\'Kike\', \'$2y$10$SJKl0JGLudhHZDhsXMSESeT/xhD/0qij88/v9.PsGvc0E33wIkjzm\', \'3794-899041\', \'Espinoza\', \'2023-09-13 17:11:21\', \'2023-09-13 17:11:21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre`, `password`, `telefono`, `apellido`, `fecha_alta`, `fecha_edit`) VALUES (\'Kike\', \'$2y$10$SJKl0JGLudhHZDhsXMSESeT/xhD/0qij88/v9.PsGvc0E33wIkjzm\', \'3794-899041\', \'Espinoza\', \'2023-09-13 17:11:21\', \'2023-09-13 17:11:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre`, `password`, `telefono`, `apellido`, `fecha_alta`, `fecha_edit`) VALUES (\'Kike\', \'$2y$10$SJKl0JGLudhHZDhsXMSESeT/xhD/0qij88/v9.PsGvc0E33wIkjzm\', \'3794-899041\', \'Espinoza\', \'2023-09-13 17:11:21\', \'2023-09-13 17:11:21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre`, `password`, `telefono`, `apellido`, `fecha_alta`, `fecha_edit`) VALUES (:nombre:, :password:, :telefono:, :apellido:, :fecha_alta:, :fecha_edit:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Models\UsuariosModel.php(72): CodeIgniter\BaseModel->save([...])
+10 APPPATH\Controllers\CtrlUsuarios.php(175): App\Models\UsuariosModel->insertarUsuario([...])
+11 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+12 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+13 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 17:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 17:16:57 --> syntax error, unexpected 'return' (T_RETURN)
+in APPPATH\Models\UsuariosModel.php on line 98.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UsuariosModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UsuariosModel')
+ 4 APPPATH\Controllers\CtrlUsuarios.php(56): spl_autoload_call('App\\Models\\UsuariosModel')
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\CtrlUsuarios->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 17:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 17:43:50 --> syntax error, unexpected '}'
+in APPPATH\Controllers\CtrlUsuarios.php on line 178.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 17:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 17:46:53 --> syntax error, unexpected ''password'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in APPPATH\Controllers\CtrlUsuarios.php on line 173.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 17:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 17:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:11:25 --> Undefined index: id_usuario
+in APPPATH\Models\UsuariosModel.php on line 73.
+ 1 APPPATH\Models\UsuariosModel.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_usuario', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php', 73, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:14:33 --> Undefined variable: builder
+in APPPATH\Models\UsuariosModel.php on line 73.
+ 1 APPPATH\Models\UsuariosModel.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: builder', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php', 73, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 18:14:50 --> Undefined variable: data
+in APPPATH\Models\UsuariosModel.php on line 73.
+ 1 APPPATH\Models\UsuariosModel.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php', 73, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 18:15:12 --> You cannot use "getCompiledInsert()" in "App\Models\UsuariosModel". This is a method of the Query Builder Class.
+in SYSTEMPATH\Model.php on line 854.
+ 1 SYSTEMPATH\Model.php(854): CodeIgniter\Exceptions\ModelException::forMethodNotAvailable('App\\Models\\UsuariosModel', 'getCompiledInsert()')
+ 2 SYSTEMPATH\Model.php(834): CodeIgniter\Model->checkBuilderMethod('getCompiledInsert')
+ 3 APPPATH\Models\UsuariosModel.php(73): CodeIgniter\Model->__call('getCompiledInsert', [])
+ 4 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 18:16:31 --> syntax error, unexpected '$db' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Models\UsuariosModel.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UsuariosModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UsuariosModel')
+ 4 APPPATH\Controllers\CtrlUsuarios.php(56): spl_autoload_call('App\\Models\\UsuariosModel')
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\CtrlUsuarios->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 18:16:52 --> syntax error, unexpected '$db' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST)
+in APPPATH\Models\UsuariosModel.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Models\\UsuariosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UsuariosModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UsuariosModel')
+ 4 APPPATH\Controllers\CtrlUsuarios.php(56): spl_autoload_call('App\\Models\\UsuariosModel')
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\CtrlUsuarios->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 18:17:11 --> Constant expression contains invalid operations
+in APPPATH\Models\UsuariosModel.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-09-13 18:23:57 --> syntax error, unexpected 'else' (T_ELSE)
+in APPPATH\Controllers\CtrlUsuarios.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:24:04 --> syntax error, unexpected 'else' (T_ELSE)
+in APPPATH\Controllers\CtrlUsuarios.php on line 179.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CtrlUsuarios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CtrlUsuarios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\CtrlUsuarios')
+ 5 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\CtrlUsuarios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:24:40 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Models\UsuariosModel.php(75): CodeIgniter\Model->update(9, [...])
+ 4 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:27:17 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Models\UsuariosModel.php(76): CodeIgniter\Model->update(10, [...])
+ 4 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:30:28 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Models\UsuariosModel.php(76): CodeIgniter\Model->update(11, [...])
+ 4 APPPATH\Controllers\CtrlUsuarios.php(177): App\Models\UsuariosModel->insertarUsuario([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->insertar_usuario()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:33:59 --> Undefined index: id
+in APPPATH\Controllers\CtrlUsuarios.php on line 231.
+ 1 APPPATH\Controllers\CtrlUsuarios.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'D:\\XAMPP\\htdocs\\instituto_de_idiomas\\app\\Controllers\\CtrlUsuarios.php', 231, [...])
+ 2 APPPATH\Controllers\CtrlUsuarios.php(203): App\Controllers\CtrlUsuarios->iniciar_sesion([...], '1234')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->controlar_logueo()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-13 18:53:37 --> Argument 2 passed to view() must be of the type array, null given, called in D:\XAMPP\htdocs\instituto_de_idiomas\app\Controllers\CtrlUsuarios.php on line 131
+in SYSTEMPATH\Common.php on line 1164.
+ 1 APPPATH\Controllers\CtrlUsuarios.php(131): view('front/login', null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlUsuarios->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlUsuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-13 18:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 18:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-13 19:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

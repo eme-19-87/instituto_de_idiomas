@@ -20,12 +20,23 @@
             Acerca de
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link nav-colors" aria-current="page" href="login">Ingresar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-colors" href="registrarse">Registrarse</a>
-        </li>
+        
+
+         <?php if (session()->id_usuario==null) {?>
+                 <li class="nav-item">
+              <a class="nav-link nav-colors" aria-current="page" href="login">Ingresar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-colors" href="registrarse">Registrarse</a>
+            </li>
+            <?php };?>
+
+          <?php if (session()->id_usuario!=null) {?>
+                 <li class="nav-item">
+              <a class="nav-link nav-colors" aria-current="page" href="cerrar_sesion">Salir</a>
+            </li>
+           
+            <?php };?>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
