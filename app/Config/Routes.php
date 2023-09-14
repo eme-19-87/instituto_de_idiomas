@@ -35,6 +35,10 @@ $routes->get('/login', 'CtrlUsuarios::login');
  */
 $routes->post('registrar_usuario', 'CtrlUsuarios::insertar_usuario');
 $routes->post('loguear_usuario', 'CtrlUsuarios::controlar_logueo');
+/*Las versiones get de registrar_usuario y loguear_usuario sirven para evitar errores de páginas no
+encontradas.*/
+$routes->get('registrar_usuario', 'CtrlUsuarios::registrarse');
+$routes->get('loguear_usuario', 'CtrlUsuarios::login');
 $routes->get('cerrar_sesion', 'CtrlUsuarios::logout');
 $routes->get('bienvenida_registro', 'CtrlUsuarios::mostrar_bienvenida');
 

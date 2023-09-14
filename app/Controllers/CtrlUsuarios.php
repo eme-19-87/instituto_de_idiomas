@@ -162,7 +162,7 @@ class CtrlUsuarios extends BaseController
         
     }
 
-     public function mostrar_bienvenida ()
+     private function mostrar_bienvenida ()
     {
         try {
                 
@@ -172,8 +172,10 @@ class CtrlUsuarios extends BaseController
                     $data['titulo']='Bienvenido';
                     echo view('front/head_view',$data);
                     echo view('front/navbar_view');
+                    echo view('front/login');
                     echo view('front/bienvenida_registro');
                     echo view('front/footer_view');
+
 
                 }else{
                     return redirect()->to(base_url());
@@ -201,6 +203,15 @@ class CtrlUsuarios extends BaseController
         La línea  if ($this->request->getMethod()=="POST") valida que no se envíen datos con POST
         */
         try {
+
+                 //almaceno los datos temporalmente para enviarlos al momento de mostrar errores
+                 $datos_post=[
+                    'nombre'=>$this->request->getPost('nombre'),
+                    'apellido'=>$this->request->getPost('apellido'),
+                    "usuario"=>$this->request->getPost('usuario'),
+                    'correo'=>$this->request->getPost('mail'),
+                    'telefono'=>$this->request->getPost('telefono')
+                 ];
                  $metodo_post=$this->request->getMethod()=="post";
 
            //Esta linea valida que se cumplan las reglas implementadas en el constructor de la clase
@@ -225,11 +236,15 @@ class CtrlUsuarios extends BaseController
                     
                     //llamamos al modelo. Nosotros le pasamos los datos, es el modelo el que inserta
                     $this->getModelUsuarios()->insertarUsuario($new_usu);
-                    return redirect()->to(base_url('bienvenida_registro'));
+                    $this->mostrar_bienvenida();
                 }else{
 
                     $data['validation']=$this->validator;
-                    $this->registrarse($data);
+                    //session()->setFlashdata('validation',$this->validator);
+                    //session()->setFlashdata('datos_registro',$datos_post);
+                   $this->registrarse($data);
+
+                    
                   
                 };
             
