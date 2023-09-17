@@ -10,13 +10,16 @@
     <div class="collapse navbar-collapse nav-colors" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link nav-colors" aria-current="page" href="inicio">Inicio</a>
+          <a class="nav-link nav-colors <?php if($resaltar==1){echo 'bg-danger';}; ?>" 
+          aria-current="page" href="inicio">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-colors" href="quienes_somos">Nosotros</a>
+          <a class="nav-link nav-colors <?php if($resaltar==2){echo 'bg-danger';}; ?>" 
+            href="quienes_somos">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-colors" aria-current="page" href="acerca_de">
+          <a class="nav-link nav-colors <?php if($resaltar==3){echo 'bg-danger';}; ?>" 
+          aria-current="page" href="acerca_de">
             Acerca de
           </a>
         </li>
@@ -24,10 +27,12 @@
 
          <?php if (session()->id_usuario==null) {?>
                  <li class="nav-item">
-              <a class="nav-link nav-colors" aria-current="page" href="login">Ingresar</a>
+              <a class="nav-link nav-colors <?php if($resaltar==4){echo 'bg-danger';}; ?> 
+              " aria-current="page" href="login">Ingresar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-colors" href="registrarse">Registrarse</a>
+              <a class="nav-link nav-colors <?php if($resaltar==5){echo 'bg-danger';}; ?> 
+              " href="registrarse">Registrarse</a>
             </li>
             <?php };?>
 

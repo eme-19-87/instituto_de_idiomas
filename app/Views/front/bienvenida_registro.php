@@ -3,7 +3,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">¡Muchas Gracias Por Registrarte!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Por favor, inicia sesión para poder hacer uso de nuestros servicios. Muchas gracias por confiar en nosotros.

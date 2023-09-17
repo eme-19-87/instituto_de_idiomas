@@ -8,59 +8,61 @@
         <div class="col-md-6 col-sm-12 pb-3">
           <label for="exampleFormControlInput1" class="form-label fw-semibold fs-5">Nombre</label>
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Ana"
-          id="nombre" name="nombre" value="<?php echo set_value('nombre')?>">
+          id="nombre" name="nombre" value="<?php echo old('nombre')?>">
           <!--Aquí se muestran los errores para el nombre-->
-          <?php if (isset ($validation) && $validation->hasError('nombre')) {?>
+
+         <?php //if (isset ($validation) && $validation->hasError('nombre')) {?>
+             
              <span class="alert-danger">
-                 *<?php echo $validation->getError('nombre');?>
+                 <?php echo session('errors.nombre') //echo $validation->getError('nombre');?>
             </span>
          
-          <?php };?>
+          <?php// };?>
 
         </div>
 
         <div class="col-md-6 col-sm-12 pb-3">
           <label for="exampleFormControlInput1" class="form-label fw-semibold fs-5">Apellido</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Pérez" id="apellido" name="apellido" value="<?php echo set_value('apellido')?>">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Pérez" id="apellido" name="apellido" value="<?php echo old('apellido')?>">
           <!--Aquí se muestran los errores para el apellido-->
-           <?php if (isset ($validation) && $validation->hasError('apellido')) {?>
+           <?php //if (isset ($validation) && $validation->hasError('apellido')) {?>
              <span class="alert-danger">
-                 *<?php echo $validation->getError('apellido');?>
+                 <?php echo session('errors.apellido')//echo $validation->getError('apellido');?>
             </span>
-            <?php };?>
+            <?php //};?>
         </div>
 
          <div class="col-md-6 col-sm-12 pb-3">
           <label for="exampleFormControlInput1" class="form-label fw-semibold fs-5">Nombre Usuario</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Pérez" id="usuario" name="usuario" value="<?php echo set_value('usuario')?>">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Pérez" id="usuario" name="usuario" value="<?php echo old('usuario')?>">
           <!--Aquí se muestran los errores para el apellido-->
-           <?php if (isset ($validation) && $validation->hasError('usuario')) {?>
+           <?php //if (isset ($validation) && $validation->hasError('usuario')) {?>
              <span class="alert-danger">
-                 *<?php echo $validation->getError('usuario');?>
+                 <?php echo session('errors.usuario')//echo $validation->getError('usuario');?>
             </span>
-            <?php };?>
+            <?php //};?>
         </div>
 
         <div class="col-md-6 col-sm-12 pb-3">
           <label for="exampleFormControlInput1" class="form-label fw-semibold fs-5">Correo electrónico</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: ana@gmail.com" id="mail" name="mail" value="<?php echo set_value('mail')?>">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: ana@gmail.com" id="mail" name="mail" value="<?php echo old('correo')?>">
           <!--Aquí se muestran los errores para el mail-->
-           <?php if (isset ($validation) && $validation->hasError('mail')) {?>
+           <?php //if (isset ($validation) && $validation->hasError('mail')) {?>
              <span class="alert-danger">
-                 *<?php echo $validation->getError('mail');?>
+                 <?php echo session('errors.mail')//echo $validation->getError('mail');?>
             </span>
-            <?php };?>
+            <?php //};?>
         </div>
 
         <div class="col-md-6 col-sm-12 pb-3">
           <label for="exampleFormControlInput1" class="form-label fw-semibold fs-5">Teléfono</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Formato: XXX-XXX-XXXX" id="telefono" name="telefono" value="<?php echo set_value('telefono')?>">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Formato: XXX-XXX-XXXX" id="telefono" name="telefono" value="<?php echo old('telefono')?>">
           <!--Aquí se muestran los errores para el teléfono-->
-           <?php if (isset ($validation) && $validation->hasError('telefono')) {?>
+           <?php //if (isset ($validation) && $validation->hasError('telefono')) {?>
              <span class="alert-danger">
-                 *<?php echo $validation->getError('telefono');?>
+                 <?php echo session('errors.telefono')//$validation->getError('telefono');?>
             </span>
-            <?php };?>
+            <?php //};?>
         </div>
 
       <h3 class="pt-2">Seguridad</h3>
@@ -70,22 +72,22 @@
           <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Mínimo 8 caracteres, una mayúscula, una mínuscula y un número"
           id="pass" name="pass">
           <!--Aquí se muestran los errores para la contraseña--->
-           <?php if (isset ($validation) && $validation->hasError('pass')) {?>
+           <?php //if (isset ($validation) && $validation->hasError('pass')) {?>
              <span class="alert-danger">
-                 *<?php echo $validation->getError('pass');?>
+                 <?php echo session('errors.pass')//$validation->getError('pass');?>
             </span>
-            <?php };?>
+            <?php //};?>
         </div>
 
         <div class="col-md-6 col-sm-12 pb-3">
           <label for="exampleFormControlInput1" class="form-label fw-semibold fs-5">Confirmar Contraseña</label>
           <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirme su contraseña, por favor" id="pass_conf" name="pass_conf">
           <!--Aquí se muestran los errores para la confirmación de la contraseña-->
-           <?php if (isset ($validation) && $validation->hasError('pass_conf')) {?>
+           <?php //if (isset ($validation) && $validation->hasError('pass_conf')) {?>
              <span class="alert-danger">
-                 *<?php echo $validation->getError('pass_conf');?>
+                 <?php echo session('errors.pass_conf')//$validation->getError('pass_conf');?>
             </span>
-            <?php };?>
+            <?php //};?>
         </div>
 
       <div class="col-md-6 col-sm-12 py-3">

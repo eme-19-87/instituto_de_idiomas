@@ -77,7 +77,7 @@ class CtrlUsuarios extends BaseController
             "usuario"=>["rules"=>"required|min_length[4]|max_length[40]|is_unique[usuarios.correo]",
             "errors"=>["required"=>"El nombre del usuario es requerido",
                        "min_length"=>"El nombre de usuario debe contener como mínimo 4 caracteres",
-                      "max_length"=>"El nombre de usuario no debe superar los 40 caracteres"],
+                      "max_length"=>"El nombre de usuario no debe superar los 40 caracteres",
                       "is_unique"=>"Ya existe un usuario con el nombre establecido"]
             ],
 
@@ -99,14 +99,14 @@ class CtrlUsuarios extends BaseController
             "errors"=>["required"=>"El campo 'mail' es obligatorio",
                        "valid_email"=>"El mail ingresado debe tener la forma nombre@dominio",
                        'is_unique'=>'Ya existe un usuario registrado con el mail ingresado']
-            ],
+            ]
             ]);
 
         $this->setReglasLogin(
             [
             "mail_login"=>["rules"=>"required|valid_email",
             "errors"=>["required"=>"El campo 'correo electronico' es obligatorio",
-                       "valid_mail"=>"El mail ingresado debe tener la forma nombre@dominio"] 
+                       "valid_email"=>"El mail ingresado debe tener la forma nombre@dominio"] 
             ],
 
             "pass_login"=>["rules"=>"required",
@@ -125,8 +125,9 @@ class CtrlUsuarios extends BaseController
                 //ventana de registrarse.
                 if (session()->id_usuario==null){
                     $data['titulo']='Registrarse';
+                    $eleccion['resaltar']=5;
                     echo view('front/head_view',$data);
-                    echo view('front/navbar_view');
+                    echo view('front/navbar_view',$eleccion);
                     echo view('back/usuarios/registrarse',$errores);
                     echo view('front/footer_view');
                 }else{
@@ -136,7 +137,7 @@ class CtrlUsuarios extends BaseController
             
         } catch (Exception $e) {
 
-            
+            d($e->getMessage());
         }
         
     }
@@ -147,9 +148,10 @@ class CtrlUsuarios extends BaseController
                  //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
                 //ventana de login
                 if (session()->id_usuario==null){
-                     $data['titulo']='Iniciar Sesión';
+                    $data['titulo']='Login';
+                    $eleccion['resaltar']=4;
                     echo view('front/head_view',$data);
-                    echo view('front/navbar_view');
+                    echo view('front/navbar_view',$eleccion);
                     echo view('back/usuarios/login',$errores);
                     echo view('front/footer_view');
                 }else{
@@ -158,7 +160,7 @@ class CtrlUsuarios extends BaseController
                 
             
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
         
     }
@@ -171,8 +173,9 @@ class CtrlUsuarios extends BaseController
                 //ventana de login
                 if (session()->id_usuario==null){
                     $data['titulo']='Bienvenido';
+                    $eleccion['resaltar']=4;
                     echo view('front/head_view',$data);
-                    echo view('front/navbar_view');
+                    echo view('front/navbar_view',$eleccion);
                     echo view('front/login');
                     echo view('front/bienvenida_registro');
                     echo view('front/footer_view');
@@ -184,7 +187,7 @@ class CtrlUsuarios extends BaseController
                 
             
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
         
     }
@@ -243,14 +246,15 @@ class CtrlUsuarios extends BaseController
                     $data['validation']=$this->validator;
                     //session()->setFlashdata('validation',$this->validator);
                     //session()->setFlashdata('datos_registro',$datos_post);
-                   $this->registrarse($data);
+                   //$this->registrarse($data);
+                    return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
 
                     
                   
                 };
             
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
      
          
@@ -274,12 +278,13 @@ class CtrlUsuarios extends BaseController
                     //En caso de que haya error o no, este método redirecciona a la vista pertinente
                     return $this->redireccionarInicioSesion($error);
                } else{
-                $data['validation']=$this->validator;
-                $this->login($data);
+                     //$data['validation']=$this->validator;
+                    
+                    return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
                };
             
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         };
      
 
@@ -315,7 +320,7 @@ class CtrlUsuarios extends BaseController
                 return $datos;
             
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         };
        
     }
@@ -330,7 +335,7 @@ class CtrlUsuarios extends BaseController
                 };
                 return $valido;
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
        
 
@@ -343,7 +348,8 @@ class CtrlUsuarios extends BaseController
     public function redireccionarInicioSesion($datos_error){
         try {
             if(strlen($datos_error["error"])!=0){
-                $this->login($datos_error);
+               
+                 return redirect()->back()->withInput()->with('errors',$datos_error);
               
             }
             else{
@@ -351,7 +357,7 @@ class CtrlUsuarios extends BaseController
             };
              
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         };
       
     
@@ -360,10 +366,13 @@ class CtrlUsuarios extends BaseController
 
     public function logout(){
         try {
-             session()->destroy();
-             return redirect()->to(base_url());
+            if (session()->id_usuario!=null){
+               session()->destroy(); 
+            };
+            return redirect()->to(base_url());
+             
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         };
        
     }
