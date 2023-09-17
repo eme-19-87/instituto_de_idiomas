@@ -12,7 +12,7 @@ class Home extends BaseController
                 $data['titulo']='Instituto de Idiomas';
                 $eleccion['resaltar']=1;
                 echo view('front/head_view',$data);
-                echo view('front/navbar_view',$resaltar);
+                echo view('front/navbar_view',$eleccion);
                 echo view('front/principal');
                 if(session()->id_usuario!=null){
                    echo view('front/modal_cierre_sesion'); 

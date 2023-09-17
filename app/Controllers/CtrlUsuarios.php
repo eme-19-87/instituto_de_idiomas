@@ -16,6 +16,7 @@ class CtrlUsuarios extends BaseController
 {
   
   //Creamos los atributos de clase 
+    
     private $usuarios;
     private $reglas_validacion;
     private $reglas_login;
@@ -208,14 +209,7 @@ class CtrlUsuarios extends BaseController
         */
         try {
 
-                 //almaceno los datos temporalmente para enviarlos al momento de mostrar errores
-                 $datos_post=[
-                    'nombre'=>$this->request->getPost('nombre'),
-                    'apellido'=>$this->request->getPost('apellido'),
-                    "usuario"=>$this->request->getPost('usuario'),
-                    'correo'=>$this->request->getPost('mail'),
-                    'telefono'=>$this->request->getPost('telefono')
-                 ];
+                
                  $metodo_post=$this->request->getMethod()=="post";
 
            //Esta linea valida que se cumplan las reglas implementadas en el constructor de la clase
@@ -243,7 +237,7 @@ class CtrlUsuarios extends BaseController
                     $this->mostrar_bienvenida();
                 }else{
 
-                    $data['validation']=$this->validator;
+                    //$data['validation']=$this->validator;
                     //session()->setFlashdata('validation',$this->validator);
                     //session()->setFlashdata('datos_registro',$datos_post);
                    //$this->registrarse($data);
@@ -269,7 +263,7 @@ class CtrlUsuarios extends BaseController
         try {
               $metodo_post=$this->request->getMethod()=="post";
               $reglas_validas=$this->validate($this->getReglasLogin());
-              $error=null;
+              //$error=null;
                if($metodo_post && $reglas_validas){
                     //recupero el usuario desde la base de datos
                     $datos_usuario=$this->getModelUsuarios()->getUsuarioPorMail($this->request->getPost("mail_login"));
