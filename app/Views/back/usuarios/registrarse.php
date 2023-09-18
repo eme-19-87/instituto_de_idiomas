@@ -11,13 +11,13 @@
           id="nombre" name="nombre" value="<?php echo old('nombre')?>">
           <!--Aquí se muestran los errores para el nombre-->
 
-         <?php //if (isset ($validation) && $validation->hasError('nombre')) {?>
+         <?php if (session('errors.nombre')!=null) {?>
              
              <span class="alert-danger">
                  <?php echo session('errors.nombre') //echo $validation->getError('nombre');?>
             </span>
          
-          <?php// };?>
+          <?php };?>
 
         </div>
 
