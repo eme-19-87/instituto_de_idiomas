@@ -16,21 +16,17 @@ class CtrlUsuarios extends BaseController
 {
   
   //Creamos los atributos de clase 
-    
+
     private $usuarios;
-    private $reglas_validacion;
+    private $reglas_registro;
     private $reglas_login;
     //Definimos los setters
     private function setModelUsuarios($modelo){
         $this->usuarios=$modelo;
     }
 
-    private function setReglaNewUpdate($reglas){
-        $this->reglas_validacion=$reglas;
-    }
-
-    private function setReglasLogin($reglas){
-         $this->reglas_login=$reglas;
+    private function setReglaRegistro($reglas){
+        $this->reglas_registro=$reglas;
     }
 
     //Definimos los getters
@@ -39,13 +35,10 @@ class CtrlUsuarios extends BaseController
     }
 
 
-    private function getReglaNewUpdate(){
-        return $this->reglas_validacion;
+    private function getReglaRegistro(){
+        return $this->reglas_registro;
     }
 
-    private function getReglasLogin(){
-        return $this->reglas_login;
-    }
 
 
     /*Creamos el controlador.
@@ -61,7 +54,7 @@ class CtrlUsuarios extends BaseController
         La regla matches sirve para comprobar si dos campos tienen el mismo valor. Su sintaxis será
         matches['nombre_campo']. Por campo me refiero a los input de la vista.
         */
-        $this->setReglaNewUpdate(
+        $this->setReglaRegistro(
             [
             "nombre"=>["rules"=>"required|min_length[3]|max_length[50]",
             "errors"=>["required"=>"El campo 'nombre' es obligatorio",
@@ -103,18 +96,6 @@ class CtrlUsuarios extends BaseController
             ]
             ]);
 
-        $this->setReglasLogin(
-            [
-            "mail_login"=>["rules"=>"required|valid_email",
-            "errors"=>["required"=>"El campo 'correo electronico' es obligatorio",
-                       "valid_email"=>"El mail ingresado debe tener la forma nombre@dominio"] 
-            ],
-
-            "pass_login"=>["rules"=>"required",
-            "errors"=>["required"=>"El campo 'Contraseña' es obligatorio"] 
-            ]
-
-            ]);
     }
 
 
@@ -124,16 +105,16 @@ class CtrlUsuarios extends BaseController
                 
                 //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
                 //ventana de registrarse.
-                if (session()->id_usuario==null){
+                //if (session()->id_usuario==null){
                     $data['titulo']='Registrarse';
-                    $eleccion['resaltar']=5;
+                    $eleccion['resaltar']="Registro";
                     echo view('front/head_view',$data);
                     echo view('front/navbar_view',$eleccion);
                     echo view('back/usuarios/registrarse',$errores);
                     echo view('front/footer_view');
-                }else{
+                /*}else{
                     return redirect()->to(base_url());
-                }
+                }*/
                 
             
         } catch (Exception $e) {
@@ -143,57 +124,7 @@ class CtrlUsuarios extends BaseController
         
     }
 
-    public function login ($errores=[])
-    {
-        try {
-                 //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
-                //ventana de login
-                if (session()->id_usuario==null){
-                    $data['titulo']='Login';
-                    $eleccion['resaltar']=4;
-                    echo view('front/head_view',$data);
-                    echo view('front/navbar_view',$eleccion);
-                    echo view('back/usuarios/login',$errores);
-                    echo view('front/footer_view');
-                }else{
-                    return redirect()->to(base_url());
-                }
-                
-            
-        } catch (Exception $e) {
-            d($e->getMessage());
-        }
-        
-    }
-
-     private function mostrar_bienvenida ()
-    {
-        try {
-                
-                 //Aquí controlo si hay una sesión iniciada. Si la hay, no le dejo que se vea la
-                //ventana de login
-                if (session()->id_usuario==null){
-                    $data['titulo']='Bienvenido';
-                    $eleccion['resaltar']=4;
-                    echo view('front/head_view',$data);
-                    echo view('front/navbar_view',$eleccion);
-                    echo view('front/login');
-                    echo view('front/bienvenida_registro');
-                    echo view('front/footer_view');
-
-
-                }else{
-                    return redirect()->to(base_url());
-                }
-                
-            
-        } catch (Exception $e) {
-            d($e->getMessage());
-        }
-        
-    }
-    
-
+   
     
     /*El método que insertará los usuarios a la base de datos.
     Debemos tener en cuenta que, aquí, estamos recibiendo el método POST*/
@@ -213,7 +144,7 @@ class CtrlUsuarios extends BaseController
                  $metodo_post=$this->request->getMethod()=="post";
 
            //Esta linea valida que se cumplan las reglas implementadas en el constructor de la clase
-                $reglas_validas=$this->validate($this->getReglaNewUpdate());
+                $reglas_validas=$this->validate($this->getReglaRegistro());
             
                 //si ambas reglas se cumplen, allí recién creamos al usuario
                 if ( $metodo_post && $reglas_validas ){
@@ -234,17 +165,16 @@ class CtrlUsuarios extends BaseController
                     
                     //llamamos al modelo. Nosotros le pasamos los datos, es el modelo el que inserta
                     $this->getModelUsuarios()->insertarUsuario($new_usu);
-                    $this->mostrar_bienvenida();
+                    //Redirecciono al logueo y le mando una variable para indicarle que la redirección
+                    //viene desde el registro de un nuevo usuario exitoso.
+                    return redirect()->to(base_url('login'))->with('nuevoUsu',true);
                 }else{
 
                     //$data['validation']=$this->validator;
                     //session()->setFlashdata('validation',$this->validator);
                     //session()->setFlashdata('datos_registro',$datos_post);
                    //$this->registrarse($data);
-                    return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
-
-                    
-                  
+                    return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());           
                 };
             
         } catch (Exception $e) {
@@ -257,117 +187,5 @@ class CtrlUsuarios extends BaseController
     }
 
 
-  /*Controla primeramente que los campos no se dejen vacíos y
-  que exista el usuario y la contraseña*/
-    public function controlar_logueo(){
-        try {
-              $metodo_post=$this->request->getMethod()=="post";
-              $reglas_validas=$this->validate($this->getReglasLogin());
-              //$error=null;
-               if($metodo_post && $reglas_validas){
-                    //recupero el usuario desde la base de datos
-                    $datos_usuario=$this->getModelUsuarios()->getUsuarioPorMail($this->request->getPost("mail_login"));
-                    //Reviso que el usuario exista e inicia la sesión
-                    $error=$this->iniciar_sesion($datos_usuario,$this->request->getPost("pass_login"));
-                    //En caso de que haya error o no, este método redirecciona a la vista pertinente
-                    return $this->redireccionarInicioSesion($error);
-               } else{
-                     //$data['validation']=$this->validator;
-                    
-                    return redirect()->back()->withInput()->with('errors',$this->validator->getErrors());
-               };
-            
-        } catch (Exception $e) {
-            d($e->getMessage());
-        };
-     
-
-    }
-
-    /*Se encrga de crear la sesión previa revisión que el usuario exista.
-    Retorna un arreglo con un string vacío en caso de haberse creado correctamente la
-    sesión y un arreglo con el string del error en caso contrario*/
-
-    private function iniciar_sesion($datos_usuario,$password){
-        try {
-                 $datos=null;
-                //Si el usuario existe, $datos_usuario no será nulo
-                $existe_usuario=$this->comprobarUsuarioContra($datos_usuario,$password);
-
-                //Compruebo que las contraseñas ingresadas sean las correctas y si lo es, inicio la sesión
-                //En caso contrario, retorno los los errores que se mostrarán en la vista.
-                //Si no hay error, se retorna un arreglo cuyo campo 'error' está vacío
-                if($existe_usuario){
-                    $datos_sesion=[
-                        'id_usuario'=>$datos_usuario['id_usuario'],
-                        'nombre_usuario'=>$datos_usuario['apellido']." ".$datos_usuario['nombre'],
-                        "correo"=>$datos_usuario['correo'],
-                        "usuario"=>$datos_usuario['usuario']
-
-                    ];
-                    $session=session();
-                    $session->set($datos_sesion);
-                    $datos["error"]="";
-                }else{
-                    $datos["error"]="Error al inicial sesión. Controle su nombre de usuario y su contraseña";
-                };
-                return $datos;
-            
-        } catch (Exception $e) {
-            d($e->getMessage());
-        };
-       
-    }
-
-
-    /*Comprueba que exista el usuario y que la contraseña corresponda con el usuario asignado*/
-    private function comprobarUsuarioContra($datos_usuario,$password){
-        try {
-                $valido=false;
-                if($datos_usuario!=null){
-                    $valido=password_verify($password,$datos_usuario['password']);
-                };
-                return $valido;
-        } catch (Exception $e) {
-            d($e->getMessage());
-        }
-       
-
-    }
-
-    /*Permite redireccionar a la página principal si hubo éxito en el logueo. 
-    Si el logueo fracas, redireccionará a la ventana de logueo mostrando el error ocurrido.
-    */
-
-    public function redireccionarInicioSesion($datos_error){
-        try {
-            if(strlen($datos_error["error"])!=0){
-               
-                 return redirect()->back()->withInput()->with('errors',$datos_error);
-              
-            }
-            else{
-                return redirect()->to(base_url());
-            };
-             
-        } catch (Exception $e) {
-            d($e->getMessage());
-        };
-      
-    
-
-    }   
-
-    public function logout(){
-        try {
-            if (session()->id_usuario!=null){
-               session()->destroy(); 
-            };
-            return redirect()->to(base_url());
-             
-        } catch (Exception $e) {
-            d($e->getMessage());
-        };
-       
-    }
+ 
 }

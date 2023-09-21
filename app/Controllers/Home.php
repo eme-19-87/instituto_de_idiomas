@@ -10,7 +10,7 @@ class Home extends BaseController
     {
         try {
                 $data['titulo']='Instituto de Idiomas';
-                $eleccion['resaltar']=1;
+                $eleccion['resaltar']="Home";
                 echo view('front/head_view',$data);
                 echo view('front/navbar_view',$eleccion);
                 echo view('front/principal');
@@ -29,7 +29,7 @@ class Home extends BaseController
     {
         try {
                 $data['titulo']='¿Quiénes somos?';
-                $eleccion['resaltar']=2;
+                $eleccion['resaltar']="Quienes";
                 echo view('front/head_view',$data);
                 echo view('front/navbar_view',$eleccion);
                 echo view('front/quienes_somos');
@@ -46,7 +46,7 @@ class Home extends BaseController
     {
         try {
                 $data['titulo']='Acerca De';
-                $eleccion['resaltar']=3;
+                $eleccion['resaltar']="Acerca";
                 echo view('front/head_view',$data);
                 echo view('front/navbar_view',$eleccion);
                 echo view('front/acerca_de');
