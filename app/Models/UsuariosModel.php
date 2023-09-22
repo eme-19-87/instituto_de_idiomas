@@ -137,12 +137,21 @@ class UsuariosModel extends Model
 
     public function getUsuarioPorMail($mail){
         try {
-             $busqueda=['correo'=>$mail,'activo'=>1,'id_perfil'=>2];
+             $busqueda=['correo'=>$mail,'activo'=>1];
              return $this->where($busqueda)->first();
         } catch (Exception $e) {
             
         }
        
+    }
+
+    public function cambiarEstadoUsuario($id,$estado){
+
+        $nuevo_estado=0;
+        if($estado==$nuevo_estado){
+            $nuevo_estado=1;
+        };
+      $this->update($id,['activo'=>$nuevo_estado]);
     }
 
     

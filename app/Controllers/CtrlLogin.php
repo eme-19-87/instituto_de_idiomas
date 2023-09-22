@@ -40,12 +40,12 @@ use App\Models\UsuariosModel;
         $this->setReglasLogin(
             [
             "mail_login"=>["rules"=>"required|valid_email",
-            "errors"=>["required"=>"El campo 'correo electronico' es obligatorio",
-                       "valid_email"=>"El mail ingresado debe tener la forma nombre@dominio"] 
+            "errors"=>["required"=>"El campo 'correo electrónico' es obligatorio.",
+                       "valid_email"=>"El mail ingresado debe tener la forma nombre@gmail.com"] 
             ],
 
             "pass_login"=>["rules"=>"required",
-            "errors"=>["required"=>"El campo 'Contraseña' es obligatorio"] 
+            "errors"=>["required"=>"El campo 'contraseña' es obligatorio."] 
             ]
 
             ]);
@@ -119,12 +119,14 @@ use App\Models\UsuariosModel;
                         'id_usuario'=>$datos_usuario['id_usuario'],
                         'nombre_persona'=>$datos_usuario['apellido']." ".$datos_usuario['nombre'],
                         "correo"=>$datos_usuario['correo'],
-                        "nombre_usuario"=>$datos_usuario['usuario']
+                        "nombre_usuario"=>$datos_usuario['usuario'],
+                        "tipo"=>$datos_usuario['id_perfil']
 
                     ];
                     $session=session();
                     $session->set($datos_sesion);
                     $datos["error"]="";
+                    
                 }else{
                     $datos["error"]="Error al inicial sesión. Usuario inválido o contraseña inválida.";
                 };
@@ -153,7 +155,7 @@ use App\Models\UsuariosModel;
     }
 
     /*Permite redireccionar a la página principal si hubo éxito en el logueo. 
-    Si el logueo fracas, redireccionará a la ventana de logueo mostrando el error ocurrido.
+    Si el logueo fracasa, redireccionará a la ventana de logueo mostrando el error ocurrido.
     */
 
     public function redireccionarInicioSesion($datos_error){
@@ -163,15 +165,20 @@ use App\Models\UsuariosModel;
                  return redirect()->back()->withInput()->with('errors',$datos_error);
               
             }
-            else{
-                return redirect()->to(base_url());
-            };
+            else if(session()->tipo==1){
+
+                return redirect()->to(base_url('admin/inicio'));
+
+            }else if(session()->tipo==2){
+
+                return redirect()->to(base_url(''));
+            }
              
         } catch (Exception $e) {
             d($e->getMessage());
         };
+            
       
-    
 
     }   
 
@@ -188,5 +195,7 @@ use App\Models\UsuariosModel;
        
     }
 
+
+        
 
 }

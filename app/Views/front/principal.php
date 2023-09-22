@@ -1,6 +1,6 @@
 <header>
   <div class="container-fluid pt-4 ps-4 text-star" style="background-color: #F9B400">
-    <div class="row align-items-center">
+    <div class="row align-items-center ps-4">
       <div class="col-sm-7 pb-5">
         <span class="h1 align-middle">Cursos grupales de 2, 3 y 4 meses, presenciales y virtuales.</span>
         <div class="d-flex pt-3">
@@ -57,7 +57,7 @@
 <br><br>
 <!-- CAROUSEL -->
 <div class="container-fluid py-4 ps-4 text-star d-none d-sm-block" style="background-color: #5E1A57">
-  <div class="row align-items-center">
+  <div class="row align-items-center ps-4">
     <div class="col-md-6">
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -86,7 +86,7 @@
         </button>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 pe-4">
       <h2 style="color: white"> Cursos de objetivos específicos</h2>
       <p style="text-align: justify; color: white">Además de los cursos regulares de los distintos idiomas, ofrecemos talleres de objetivos específicos. Los talleres son el ámbito ideal para estudiar la lengua elegida con un objetivo particular, por ejemplo, mejorar la pronunciación, hablar sobre cine o literatura, desarrollar la capacidad para hablar y 
         escribir en ámbitos laborales y académicos, entre otras propuestas. </p>

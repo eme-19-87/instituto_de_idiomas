@@ -21,29 +21,14 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Auth implements FilterInterface
+class Admin implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        /*El valor 1 representa al usuario Administrador. Si un administrador está logueado,
-        no se le debe permitir ingresar al registro o logueo.
-        El valor 2 representa al usuario Cliente. Si en ambos casos está nulo, entonces redirigirá a
-        la vista principal.*/
     	
-        switch(session()->tipo){
-            case 1:
-                return redirect()->to(base_url('admin/inicio'));
-                break;
-            case 2:
-                 return redirect()->to(base_url());
-                 break;
-        };
-        /*
-        if(session()->tipo==2){
-        	
-        }else if(session()->tipo==1){
-            
-        }*/
+        if(session()->id_usuario==null or session()->tipo!=1){
+        	return redirect()->to(base_url());
+        }
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

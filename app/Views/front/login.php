@@ -1,20 +1,18 @@
 <div class="container-fluid pt-4 pb-5 ps-4">
 	<h2 class="text-star mb-4">Iniciar Sesión</h2>
 	<?php if(isset ($validation)){?>
-          <div class="alert alert-danger">
-            <?php echo $validation->listErrors();?>
-          </div>
+		<div class="alert alert-danger">
+			<?php echo $validation->listErrors();?>
+		</div>
+  <?php };?>
+
+  <?php if(isset ($error) and $error!=""){?>
+		<div class="alert alert-danger">
+			<?php echo $error;?>
+		</div>
           
 
-        <?php };?>
-
-    <?php if(isset ($error) and $error!=""){?>
-          <div class="alert alert-danger">
-            <?php echo $error;?>
-          </div>
-          
-
-        <?php };?>
+  <?php };?>
   <div class="row px-3 pb-5">
   	<div class="col-lg-6 col-md-12 m-auto text-star p-4" style="background: #F9B400; border-radius:15px;">
   		<form class="w-100" method="post" action="<?php echo base_url('/loguear_usuario')?>">
