@@ -1,5 +1,5 @@
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg" style="background-color: #5E1A57;">
+<nav class="navbar navbar-expand-lg px-4" style="background-color: #5E1A57;">
   <div class="container-fluid px-4">
     <a class="navbar-brand" href="inicio">
       <img src="./assets/img/logo.svg" alt="IDI" width="40px">
@@ -9,50 +9,65 @@
     </button>
     <div class="collapse navbar-collapse nav-colors" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Home'){echo 'text-warning';}; ?>" 
-          aria-current="page" href="inicio">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Quienes'){echo 'text-warning';}; ?>" 
-            href="quienes_somos">Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Acerca'){echo 'text-warning';}; ?>" 
-          aria-current="page" href="acerca_de">
-            Acerca de
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Administrar'){echo 'text-warning';}; ?>" 
-          aria-current="page" href="administrar_usuarios">
-            Administrar
-          </a>
-        </li>
+        <?php if (session()->id_usuario==null) {?>
+          <li class="nav-item">
+            <a class="nav-link nav-colors <?php if($resaltar=='Home'){echo 'text-warning';}; ?>" 
+            aria-current="page" href="inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-colors <?php if($resaltar=='Quienes'){echo 'text-warning';}; ?>" 
+              href="quienes_somos">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-colors <?php if($resaltar=='Acerca'){echo 'text-warning';}; ?>" 
+            aria-current="page" href="acerca_de">
+              Acerca de
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-colors <?php if($resaltar=='Registro'){echo 'text-warning';}; ?> 
+            " href="registrarse">Registrarse</a>
+          </li>
+        <?php };?>
+
+        <?php if (session()->id_usuario!=null) {?>
+          <li class="nav-item">
+            <a class="nav-link nav-colors <?php if($resaltar=='Administrar'){echo 'text-warning';}; ?>" 
+            aria-current="page" href="administrar_usuarios">
+              Administrar usuarios
+            </a>
+          </li>
+        <?php };?>
         
-
-         <?php if (session()->id_usuario==null) {?>
-                 <li class="nav-item">
-              <a class="nav-link nav-colors <?php if($resaltar=='Login'){echo 'text-warning';}; ?> 
-              " aria-current="page" href="login">Ingresar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-colors <?php if($resaltar=='Registro'){echo 'text-warning';}; ?> 
-              " href="registrarse">Registrarse</a>
-            </li>
-            <?php };?>
-
-          <?php if (session()->id_usuario!=null) {?>
-                 <li class="nav-item">
-                <a type="button" class="nav-link nav-colors" data-bs-toggle="modal" data-bs-target="#cierre_sesion">Salir</a>
-                </li>
-           
-            <?php };?>
       </ul>
-      <form class="d-flex" role="search">
+      <!--<form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Buscar</button>
-      </form>
+      </form>-->
+
+      <div class="">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path style="fill: white" d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path style="fill: white" fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <?php if (session()->id_usuario==null) {?>
+                <li><a class="dropdown-item" href="login">Ingresar</a></li>
+              <?php };?>
+              
+              <?php if (session()->id_usuario!=null) {?>
+                  <li>
+                    <a class="dropdown-item" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#cierre_sesion">Cerrar sesión</a>
+                  </li>
+              <?php };?>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

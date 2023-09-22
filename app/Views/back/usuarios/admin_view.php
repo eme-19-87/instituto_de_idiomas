@@ -1,32 +1,27 @@
-<div class="container-fluid pt-4 pb-5 ps-4">
-	<h2 class="text-star mb-4">Vista admin</h2>
+<div class="container-fluid py-4 ps-4 px-4">
+	<h2 class="text-star mb-4 ps-4">Tabla de usuarios registrados</h2>
 
-	<table class="table table-hover table-bordered table-responsive">
+	<table class="table table-hover table-bordered table-responsive border-dark px-4">
 		<thead>
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">Nombre</th>
-				<th scope="col">Correo electrónico</th>
-				<th scope="col">Idioma</th>
+			<tr style="background-color: #FFD93D">
+				<th scope="col" style="color: #5E1A57; background-color: #FFD93D">N°</th>
+				<th scope="col" style="color: #5E1A57; background-color: #FFD93D">Nombre</th>
+				<th scope="col" style="color: #5E1A57; background-color: #FFD93D">Correo electrónico</th>
+				<th scope="col" style="color: #5E1A57; background-color: #FFD93D">---</th>
 			</tr>
 		</thead>
 		<tbody class="table-group-divider">
 			<tr>
 				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
+				<td>María</td>
+				<td>mmaria10@gmail.com</td>
+				<td>---</td>
 			</tr>
 			<tr>
 				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td colspan="2">Larry the Bird</td>
-				<td>@twitter</td>
+				<td>Gonzáles</td>
+				<td>gdavid@gmail.com</td>
+				<td>---</td>
 			</tr>
 		</tbody>
 	</table>

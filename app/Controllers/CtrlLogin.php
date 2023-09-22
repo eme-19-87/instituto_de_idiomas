@@ -40,12 +40,12 @@ use App\Models\UsuariosModel;
         $this->setReglasLogin(
             [
             "mail_login"=>["rules"=>"required|valid_email",
-            "errors"=>["required"=>"El campo 'correo electronico' es obligatorio",
-                       "valid_email"=>"El mail ingresado debe tener la forma nombre@dominio"] 
+            "errors"=>["required"=>"El campo 'correo electrónico' es obligatorio.",
+                       "valid_email"=>"El mail ingresado debe tener la forma nombre@gmail.com"] 
             ],
 
             "pass_login"=>["rules"=>"required",
-            "errors"=>["required"=>"El campo 'Contraseña' es obligatorio"] 
+            "errors"=>["required"=>"El campo 'contraseña' es obligatorio."] 
             ]
 
             ]);
@@ -125,8 +125,9 @@ use App\Models\UsuariosModel;
                     $session=session();
                     $session->set($datos_sesion);
                     $datos["error"]="";
+                    
                 }else{
-                    $datos["error"]="Error al inicial sesión. Controle su nombre de usuario y su contraseña";
+                    $datos["error"]="Error al iniciar sesión. Controle su nombre de usuario y su contraseña.";
                 };
                 return $datos;
             
@@ -153,7 +154,7 @@ use App\Models\UsuariosModel;
     }
 
     /*Permite redireccionar a la página principal si hubo éxito en el logueo. 
-    Si el logueo fracas, redireccionará a la ventana de logueo mostrando el error ocurrido.
+    Si el logueo fracasa, redireccionará a la ventana de logueo mostrando el error ocurrido.
     */
 
     public function redireccionarInicioSesion($datos_error){
@@ -164,7 +165,7 @@ use App\Models\UsuariosModel;
               
             }
             else{
-                return redirect()->to(base_url());
+                return redirect()->to(base_url('administrar_usuarios'));
             };
              
         } catch (Exception $e) {

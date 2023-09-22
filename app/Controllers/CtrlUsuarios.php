@@ -180,11 +180,6 @@ class CtrlUsuarios extends BaseController
         } catch (Exception $e) {
             d($e->getMessage());
         }
-     
-         
-        
 
     }
-
- 
 }
