@@ -10,28 +10,34 @@
     <div class="collapse navbar-collapse nav-colors" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Home'){echo 'bg-danger';}; ?>" 
+          <a class="nav-link nav-colors <?php if($resaltar=='Home'){echo 'text-warning';}; ?>" 
           aria-current="page" href="inicio">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Quienes'){echo 'bg-danger';}; ?>" 
+          <a class="nav-link nav-colors <?php if($resaltar=='Quienes'){echo 'text-warning';}; ?>" 
             href="quienes_somos">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-colors <?php if($resaltar=='Acerca'){echo 'bg-danger';}; ?>" 
+          <a class="nav-link nav-colors <?php if($resaltar=='Acerca'){echo 'text-warning';}; ?>" 
           aria-current="page" href="acerca_de">
             Acerca de
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-colors <?php if($resaltar=='Administrar'){echo 'text-warning';}; ?>" 
+          aria-current="page" href="administrar_usuarios">
+            Administrar
           </a>
         </li>
         
 
          <?php if (session()->id_usuario==null) {?>
                  <li class="nav-item">
-              <a class="nav-link nav-colors <?php if($resaltar=='Login'){echo 'bg-danger';}; ?> 
+              <a class="nav-link nav-colors <?php if($resaltar=='Login'){echo 'text-warning';}; ?> 
               " aria-current="page" href="login">Ingresar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-colors <?php if($resaltar=='Registro'){echo 'bg-danger';}; ?> 
+              <a class="nav-link nav-colors <?php if($resaltar=='Registro'){echo 'text-warning';}; ?> 
               " href="registrarse">Registrarse</a>
             </li>
             <?php };?>

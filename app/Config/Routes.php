@@ -36,6 +36,7 @@ $routes->get('/login', 'CtrlLogin::login',['filter'=>'auth']);
  */
 $routes->post('registrar_usuario', 'CtrlUsuarios::insertar_usuario');
 $routes->post('loguear_usuario', 'CtrlLogin::controlar_logueo');
+$routes->get('administrar_usuarios', 'CtrlLogin::admin_view');
 /*Las versiones get de registrar_usuario y loguear_usuario sirven para evitar errores de páginas no
 encontradas.*/
 $routes->get('registrar_usuario', 'CtrlUsuarios::registrarse');

@@ -186,6 +186,5 @@ class CtrlUsuarios extends BaseController
 
     }
 
-
  
 }

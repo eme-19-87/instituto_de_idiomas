@@ -189,4 +189,17 @@ use App\Models\UsuariosModel;
     }
 
 
+        // Para probar admin_view
+
+        public function admin_view ()
+        {
+    
+            $data['titulo']='Administración';
+            $eleccion['resaltar']="Administrar";
+            echo view('front/head_view',$data);
+            echo view('front/navbar_view',$eleccion);
+            echo view('back/usuarios/admin_view');
+            echo view('front/footer_view');
+        }
+
 }
