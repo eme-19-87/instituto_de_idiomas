@@ -126,7 +126,7 @@ use App\Models\UsuariosModel;
                     $session->set($datos_sesion);
                     $datos["error"]="";
                 }else{
-                    $datos["error"]="Error al inicial sesión. Controle su nombre de usuario y su contraseña";
+                    $datos["error"]="Error al inicial sesión. Usuario inválido o contraseña inválida.";
                 };
                 return $datos;
             

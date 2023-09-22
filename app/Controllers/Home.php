@@ -25,6 +25,8 @@ class Home extends BaseController
         }
        
     }
+
+    
     public function quienes_somos ()
     {
         try {

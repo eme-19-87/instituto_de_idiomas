@@ -38,7 +38,7 @@
 
           <?php if (session()->id_usuario!=null) {?>
                  <li class="nav-item">
-                <a type="button" class="nav-link nav-colors" data-bs-toggle="modal" data-bs-target="#cierre_sesion">Salir</a>
+                <a type="button" class="nav-link nav-colors" id="salir" data-bs-toggle="modal" data-bs-target="#cierre_sesion">Salir</a>
                 </li>
            
             <?php };?>

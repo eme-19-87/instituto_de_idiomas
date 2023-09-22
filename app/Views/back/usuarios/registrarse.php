@@ -13,7 +13,7 @@
 
          <?php if (session('errors.nombre')!=null) {?>
              
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-nombre">
                  <?php echo session('errors.nombre') //echo $validation->getError('nombre');?>
             </span>
          
@@ -26,7 +26,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Pérez" id="apellido" name="apellido" value="<?php echo old('apellido')?>">
           <!--Aquí se muestran los errores para el apellido-->
            <?php //if (isset ($validation) && $validation->hasError('apellido')) {?>
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-apellido">
                  <?php echo session('errors.apellido')//echo $validation->getError('apellido');?>
             </span>
             <?php //};?>
@@ -37,7 +37,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Pérez" id="usuario" name="usuario" value="<?php echo old('usuario')?>">
           <!--Aquí se muestran los errores para el apellido-->
            <?php //if (isset ($validation) && $validation->hasError('usuario')) {?>
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-usuario">
                  <?php echo session('errors.usuario')//echo $validation->getError('usuario');?>
             </span>
             <?php //};?>
@@ -48,7 +48,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: ana@gmail.com" id="mail" name="mail" value="<?php echo old('correo')?>">
           <!--Aquí se muestran los errores para el mail-->
            <?php //if (isset ($validation) && $validation->hasError('mail')) {?>
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-correo">
                  <?php echo session('errors.mail')//echo $validation->getError('mail');?>
             </span>
             <?php //};?>
@@ -59,7 +59,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Formato: XXX-XXX-XXXX" id="telefono" name="telefono" value="<?php echo old('telefono')?>">
           <!--Aquí se muestran los errores para el teléfono-->
            <?php //if (isset ($validation) && $validation->hasError('telefono')) {?>
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-telefono">
                  <?php echo session('errors.telefono')//$validation->getError('telefono');?>
             </span>
             <?php //};?>
@@ -73,7 +73,7 @@
           id="pass" name="pass">
           <!--Aquí se muestran los errores para la contraseña--->
            <?php //if (isset ($validation) && $validation->hasError('pass')) {?>
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-password">
                  <?php echo session('errors.pass')//$validation->getError('pass');?>
             </span>
             <?php //};?>
@@ -84,7 +84,7 @@
           <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirme su contraseña, por favor" id="pass_conf" name="pass_conf">
           <!--Aquí se muestran los errores para la confirmación de la contraseña-->
            <?php //if (isset ($validation) && $validation->hasError('pass_conf')) {?>
-             <span class="alert-danger">
+             <span class="alert-danger" id="error-conf-password">
                  <?php echo session('errors.pass_conf')//$validation->getError('pass_conf');?>
             </span>
             <?php //};?>
