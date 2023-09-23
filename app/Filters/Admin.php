@@ -25,8 +25,8 @@ class Admin implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-    	
-        if(session()->id_usuario==null or session()->tipo!=1){
+
+        if(session()->tipo!=1){
         	return redirect()->to(base_url());
         }
     }

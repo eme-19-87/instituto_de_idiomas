@@ -21,7 +21,7 @@ class CtrlUsuarios extends BaseController
     private $reglas_registro;
     private $reglas_login;
     //Definimos los setters
-    private function setModelUsuarios($modelo){
+    private function setUsuariosModel($modelo){
         $this->usuarios=$modelo;
     }
 
@@ -30,7 +30,7 @@ class CtrlUsuarios extends BaseController
     }
 
     //Definimos los getters
-    private function getModelUsuarios(){
+    private function getUsuariosModel(){
         return $this->usuarios;
     }
 
@@ -47,7 +47,7 @@ class CtrlUsuarios extends BaseController
     Nótese cómo se settea la variable mediante el setter*/
     public function __construct(){
         helper('form','url');
-        $this->setModelUsuarios(new UsuariosModel());
+        $this->setUsuariosModel(new UsuariosModel());
         /*
         La regla is_unique permite determinar que un campo específico sea único. Para ello le decimos
         is_unique['nombre_tabla.nombre_campo'].
@@ -85,9 +85,9 @@ class CtrlUsuarios extends BaseController
                       "matches"=>"La contraseña y su confirmación no coinciden"]
             ],
 
-             "telefono"=>["rules"=>"required|regex_match[/3[0123456789]{3}-[0123456789]{6}/]",
+             "telefono"=>["rules"=>"required|regex_match[/[0123456789]{10,12}/]",
             "errors"=>["required"=>"El campo 'telefono'e es obligatorio",
-                      "regex_match"=>"El teléfono debe tener la forma 3794-3467823"]
+                      "regex_match"=>"El teléfono debe ser uno válido. Por ejemplo: 3794891941"]
             ],
              "mail"=>["rules"=>"required|valid_email|is_unique[usuarios.correo]",
             "errors"=>["required"=>"El campo 'mail' es obligatorio",
@@ -164,7 +164,7 @@ class CtrlUsuarios extends BaseController
                     ];
                     
                     //llamamos al modelo. Nosotros le pasamos los datos, es el modelo el que inserta
-                    $this->getModelUsuarios()->insertarUsuario($new_usu);
+                    $this->getUsuariosModel()->insertarUsuario($new_usu);
                     //Redirecciono al logueo y le mando una variable para indicarle que la redirección
                     //viene desde el registro de un nuevo usuario exitoso.
                     return redirect()->to(base_url('login'))->with('nuevoUsu',true);

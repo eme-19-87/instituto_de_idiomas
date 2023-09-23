@@ -12,7 +12,7 @@ use App\Models\UsuariosModel;
     private $usuarios;
     private $reglas_login;
     //Definimos los setters
-    private function setModelUsuarios($modelo){
+    private function setUsuariosModel($modelo){
         $this->usuarios=$modelo;
     }
 
@@ -22,7 +22,7 @@ use App\Models\UsuariosModel;
     }
 
     //Definimos los getters
-    private function getModelUsuarios(){
+    private function getUsuariosModel(){
         return $this->usuarios;
     }
 
@@ -34,7 +34,7 @@ use App\Models\UsuariosModel;
 
     public function __construct(){
         helper('form','url');
-        $this->setModelUsuarios(new UsuariosModel());
+        $this->setUsuariosModel(new UsuariosModel());
         
 
         $this->setReglasLogin(
@@ -83,7 +83,7 @@ use App\Models\UsuariosModel;
               //$error=null;
                if($metodo_post && $reglas_validas){
                     //recupero el usuario desde la base de datos
-                    $datos_usuario=$this->getModelUsuarios()->getUsuarioPorMail($this->request->getPost("mail_login"));
+                    $datos_usuario=$this->getUsuariosModel()->getUsuarioPorMail($this->request->getPost("mail_login"));
                     //Reviso que el usuario exista e inicia la sesión
                     $error=$this->iniciar_sesion($datos_usuario,$this->request->getPost("pass_login"));
                     //En caso de que haya error o no, este método redirecciona a la vista pertinente
@@ -109,12 +109,12 @@ use App\Models\UsuariosModel;
         try {
                  $datos=null;
                 //Si el usuario existe, $datos_usuario no será nulo
-                $existe_usuario=$this->comprobarUsuarioContra($datos_usuario,$password);
+                $existe_verificado=$this->comprobarUsuarioContra($datos_usuario,$password);
 
                 //Compruebo que las contraseñas ingresadas sean las correctas y si lo es, inicio la sesión
                 //En caso contrario, retorno los los errores que se mostrarán en la vista.
                 //Si no hay error, se retorna un arreglo cuyo campo 'error' está vacío
-                if($existe_usuario){
+                if($existe_verificado){
                     $datos_sesion=[
                         'id_usuario'=>$datos_usuario['id_usuario'],
                         'nombre_persona'=>$datos_usuario['apellido']." ".$datos_usuario['nombre'],
@@ -160,19 +160,27 @@ use App\Models\UsuariosModel;
 
     public function redireccionarInicioSesion($datos_error){
         try {
-            if(strlen($datos_error["error"])!=0){
-               
-                 return redirect()->back()->withInput()->with('errors',$datos_error);
-              
-            }
-            else if(session()->tipo==1){
+                //Coloco los valores del id de los distintos perfiles para saber a dónde redirigirme en
+                //caso que no haya errores.
+                $esCliente=2;
+                $esAdmin=1;
 
-                return redirect()->to(base_url('admin/inicio'));
+                //Controlo la longitud de la cadena de los errores. Si no es cero, significa que hubo errores.
+                $hayError=strlen($datos_error["error"])!=0;
+                
+                if($hayError){
+                   
+                     return redirect()->back()->withInput()->with('errors',$datos_error);
+                  
+                }
+                else if(session()->tipo==$esAdmin){
 
-            }else if(session()->tipo==2){
+                    return redirect()->to(base_url('admin/inicio'));
 
-                return redirect()->to(base_url(''));
-            }
+                }else if(session()->tipo==$esCliente){
+
+                    return redirect()->to(base_url(''));
+                }
              
         } catch (Exception $e) {
             d($e->getMessage());

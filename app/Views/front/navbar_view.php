@@ -58,7 +58,9 @@
                     <a class="dropdown-item" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#cierre_sesion"><?php echo session()->nombre_usuario?></a>
                   </li>
                   <li>
-                    <a class="dropdown-item" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#cierre_sesion">Cerrar sesión</a>
+                    <a class="dropdown-item" style="cursor: pointer" href="<?php echo base_url('cerrar_sesion')?>">
+                      Cerrar sesión
+                    </a>
                   </li>
               <?php };?>
             </ul>

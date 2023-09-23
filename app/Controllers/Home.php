@@ -14,9 +14,6 @@ class Home extends BaseController
                 echo view('front/head_view',$data);
                 echo view('front/navbar_view',$eleccion);
                 echo view('front/principal');
-                if(session()->id_usuario!=null){
-                   echo view('front/modal_cierre_sesion'); 
-                };
                 echo view('front/footer_view');
             
         } catch (Exception $e) {
@@ -35,15 +32,13 @@ class Home extends BaseController
                 echo view('front/head_view',$data);
                 echo view('front/navbar_view',$eleccion);
                 echo view('front/quienes_somos');
-                if(session()->id_usuario!=null){
-                   echo view('front/modal_cierre_sesion'); 
-                };
                 echo view('front/footer_view');
         } catch (Exception $e) {
             d($e->getMessage());
         }
         
     }
+    
     public function acerca_de ()
     {
         try {
@@ -52,9 +47,6 @@ class Home extends BaseController
                 echo view('front/head_view',$data);
                 echo view('front/navbar_view',$eleccion);
                 echo view('front/acerca_de');
-                if(session()->id_usuario!=null){
-                   echo view('front/modal_cierre_sesion'); 
-                };
                 echo view('front/footer_view');
         } catch (Exception $e) {
             d($e->getMessage());

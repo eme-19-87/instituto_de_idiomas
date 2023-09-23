@@ -9,19 +9,19 @@ class CtrlAdmin extends BaseController{
 
 	private $usuarios;
    
-    private function setModelUsuarios($modelo){
+    private function setUsuariosModel($modelo){
         $this->usuarios=$modelo;
     }
 
 
     //Definimos los getters
-    private function getModelUsuarios(){
+    private function getUsuariosModel(){
         return $this->usuarios;
     }
 
     public function __construct(){
         helper('form','url');
-        $this->setModelUsuarios(new UsuariosModel());
+        $this->setUsuariosModel(new UsuariosModel());
     }
 
 
@@ -30,17 +30,16 @@ class CtrlAdmin extends BaseController{
     
             $data['titulo']='Administración';
             $eleccion['resaltar']="Usuarios";
-            $usuarios['usuarios']=$this->getModelUsuarios()->getUsuarios();
+            $usuarios['usuarios']=$this->getUsuariosModel()->getUsuarios();
             echo view('front/head_view',$data);
-            echo view('front/navbar_view_admin',$eleccion);
+            echo view('back/usuarios/navbar_view_admin',$eleccion);
             echo view('back/usuarios/admin_view',$usuarios);
-            echo view('front/modal_cierre_sesion');
             echo view('front/footer_view');
         }
 
    public function cambiarEstado($id,$estado){
         
-        $this->getModelUsuarios()->cambiarEstadoUsuario((int)$id,(int)$estado);
+        $this->getUsuariosModel()->cambiarEstadoUsuario((int)$id,(int)$estado);
         return redirect()->to(base_url("admin/inicio"));
    }
 

@@ -29,7 +29,7 @@
 						Loguear
 					</button>
 
-					<button type="button" class="boton-cancelar fw-semibold fs-5" >
+					<button type="button" class="boton-cancelar fw-semibold fs-5" onclick="limpiarInputsLogin()">
 						Cancelar
 					</button>
 				</div>

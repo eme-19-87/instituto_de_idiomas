@@ -11,7 +11,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link nav-colors <?php if($resaltar=='Usuarios'){echo 'text-warning';}; ?>" 
-            aria-current="page" href="admin/inicio">
+            aria-current="page" href="<?php echo base_url('admin/inicio');?>">
               Usuarios
             </a>
           </li>
@@ -40,7 +40,8 @@
                     <a class="dropdown-item" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#"><?php echo session()->nombre_usuario?></a>
                   </li>
                   <li>
-                    <a class="dropdown-item" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#cierre_sesion" id="salir">Cerrar sesión</a>
+                    <a class="dropdown-item" style="cursor: pointer" href="<?php echo base_url('admin/cerrar_sesion');?>" 
+                    id="salir">Cerrar sesión</a>
                   </li>
               <?php };?>
             </ul>
