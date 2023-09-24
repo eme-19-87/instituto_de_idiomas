@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'td-espinozaenrique',
+        'database' => 'cursos_de_idiomas',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

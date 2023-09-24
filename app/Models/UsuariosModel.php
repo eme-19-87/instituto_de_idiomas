@@ -69,7 +69,7 @@ class UsuariosModel extends Model
         try {
             return $this->findAll();
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
        
     }
@@ -79,7 +79,7 @@ class UsuariosModel extends Model
             $this->save($datos);
 
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
         
         
@@ -90,7 +90,7 @@ class UsuariosModel extends Model
             return $this->where('id_usuario',$id)->first();
 
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
         
     }
@@ -100,7 +100,7 @@ class UsuariosModel extends Model
             return $this->where('activo',$estado)->findAll();
 
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
         
     }
@@ -111,47 +111,33 @@ class UsuariosModel extends Model
             $this->update($id,$datos);
 
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
         
     }
 
-    public function darBaja($id){
-        try {
-            $this->update($id,['activo'=>0]);
-        } catch (Exception $e) {
-            
-        }
-        
-    }
-
-    public function darAlta($id){
-        try {
-             $this->update($id,['activo'=>1]);
-
-        } catch (Exception $e) {
-            
-        }
-       
-    }
 
     public function getUsuarioPorMail($mail){
         try {
              $busqueda=['correo'=>$mail,'activo'=>1];
              return $this->where($busqueda)->first();
         } catch (Exception $e) {
-            
+            d($e->getMessage());
         }
        
     }
 
     public function cambiarEstadoUsuario($id,$estado){
-
-        $nuevo_estado=0;
-        if($estado==$nuevo_estado){
-            $nuevo_estado=1;
-        };
-      $this->update($id,['activo'=>$nuevo_estado]);
+        try {
+                $nuevo_estado=0;
+                if($estado==$nuevo_estado){
+                    $nuevo_estado=1;
+                };
+              $this->update($id,['activo'=>$nuevo_estado]);  
+        } catch (Exception $e) {
+            d($e->getMessage());
+        }
+      
     }
 
     

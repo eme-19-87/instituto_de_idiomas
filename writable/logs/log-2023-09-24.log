@@ -1,0 +1,55 @@
+INFO - 2023-09-24 17:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-24 18:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-24 18:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-24 18:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-24 18:10:15 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'instituto_de_idiomas' in D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'instituto_de_id...', 3306, '', 0)
+#1 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\instituto_de_idiomas\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\instituto_de_idiomas\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\instituto_de_idiomas\app\Models\UsuariosModel.php(123): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\instituto_de_idiomas\app\Controllers\CtrlLogin.php(86): App\Models\UsuariosModel->getUsuarioPorMail('espinoza_enriqu...')
+#8 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(932): App\Controllers\CtrlLogin->controlar_logueo()
+#9 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlLogin))
+#10 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\instituto_de_idiomas\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'instituto_de_idiomas' in D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\instituto_de_idiomas\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\instituto_de_idiomas\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\instituto_de_idiomas\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 D:\XAMPP\htdocs\instituto_de_idiomas\app\Models\UsuariosModel.php(123): CodeIgniter\BaseModel->first()
+#6 D:\XAMPP\htdocs\instituto_de_idiomas\app\Controllers\CtrlLogin.php(86): App\Models\UsuariosModel->getUsuarioPorMail('espinoza_enriqu...')
+#7 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(932): App\Controllers\CtrlLogin->controlar_logueo()
+#8 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlLogin))
+#9 D:\XAMPP\htdocs\instituto_de_idiomas\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\instituto_de_idiomas\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-24 18:10:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'instituto_de_idiomas'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `correo` = :correo:
+AND `activo` = :activo:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsuariosModel.php(123): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\CtrlLogin.php(86): App\Models\UsuariosModel->getUsuarioPorMail('espinoza_enrique@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\CtrlLogin->controlar_logueo()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CtrlLogin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-24 18:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-24 18:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-24 18:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-24 18:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
