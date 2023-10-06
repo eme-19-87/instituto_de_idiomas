@@ -11,6 +11,7 @@ use App\Models\UsuariosModel;
 
     private $usuarios;
     private $reglas_login;
+
     //Definimos los setters
     private function setUsuariosModel($modelo){
         $this->usuarios=$modelo;
@@ -59,12 +60,17 @@ use App\Models\UsuariosModel;
                     $bienvenida=session('nuevoUsu');
                     $data['titulo']='Login';
                     $eleccion['resaltar']='Login';
+                    //cabecera
                     echo view('front/head_view',$data);
+                    /*Inicio cuerpo*/
                     echo view('front/navbar_view',$eleccion);
+
                     echo view('back/usuarios/login');
                     if($bienvenida){
                         echo view('front/bienvenida_registro');
                     }
+                    /*Cuerpo*/
+                     //pie
                     echo view('front/footer_view');
                
             

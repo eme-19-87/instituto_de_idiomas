@@ -19,7 +19,7 @@ class CtrlUsuarios extends BaseController
 
     private $usuarios;
     private $reglas_registro;
-    private $reglas_login;
+
     //Definimos los setters
     private function setUsuariosModel($modelo){
         $this->usuarios=$modelo;
@@ -68,7 +68,7 @@ class CtrlUsuarios extends BaseController
                       "max_length"=>"El campo apellido no debe superar los 80 caracteres"] 
             ],
 
-            "usuario"=>["rules"=>"required|min_length[4]|max_length[40]|is_unique[usuarios.correo]",
+            "usuario"=>["rules"=>"required|min_length[4]|max_length[40]|is_unique[usuarios.usuario]",
             "errors"=>["required"=>"El nombre del usuario es requerido",
                        "min_length"=>"El nombre de usuario debe contener como mínimo 4 caracteres",
                       "max_length"=>"El nombre de usuario no debe superar los 40 caracteres",
